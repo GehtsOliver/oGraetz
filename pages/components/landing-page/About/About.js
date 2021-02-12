@@ -27,14 +27,11 @@ const About = () => {
           }}
         >
           <p style={{ width: "25rem" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ad
-            harum eius libero recusandae quasi tenetur consectetur incidunt
-            inventore eveniet?
+            Hey! <br/>As you might have guessed, my name is Oliver and I am a Web Developer based in Vienna, Austria.
+            Coding websites and applications of any kind is my passion. I am 100% self-taught which represents quite well how much I love doing it.
           </p>
           <p style={{ width: "25rem" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ad
-            harum eius libero recusandae quasi tenetur consectetur incidunt
-            inventore eveniet?
+            I put in hundreds and hundreds of hours to reach the level of being capable of coding almost any website imagineable. There is barely a challenge I am unable to surmount.
           </p>
         </article>
       </Container>
