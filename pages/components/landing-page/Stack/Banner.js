@@ -9,7 +9,7 @@ const Slideshow = styled.div`
 `;
 
 const ImagesContainer = styled.div`
-position: relative;
+  position: relative;
   left: 1800px;
   height: 100%;
   width: 300%;
@@ -17,46 +17,47 @@ position: relative;
   display: flex;
   column-gap: 3rem;
 
-:hover {
-  animation-play-state: paused;
-}
-
-  @keyframes slideshow {
-    0%    { left: 1800px; }
-    100%  { left: -140%; }
+  :hover {
+    animation-play-state: paused;
   }
 
-  > div:hover{
+  @keyframes slideshow {
+    0% {
+      left: 1800px;
+    }
+    100% {
+      left: -140%;
+    }
+  }
+
+  > div:hover {
     cursor: pointer;
     transition: all 2s;
-    transform: scale3d(1.1, 1.2, 1.1)
+    transform: scale3d(1.1, 1.2, 1.1);
   }
 `;
 
-const Banner = () => {
+const Banner = ({ setSelectedElement }) => {
+  const images = [
+    {name:"HTML", category: "Frontend"},
+    {name:"CSS", category: "Frontend"},
+    {name: "Javascript", category: "Frontend"},
+    {name: "React", category: "Frontend"},
+    {name: "Nextjs", category: "Frontend"},
+    {name: "Nodejs", category: "Backend"},
+    {name: "Firebase", category: "Database"},
+    {name: "Mongodb", category: "Database"},
+    {name: "Mysql", category: "Database"},
+    {name: "Figma", category: "Design"},
+  ];
+
+  const imageElements = images.map((image) => {
+    return <Image onClick={() => setSelectedElement(image.category)} height={100} width={200} src={`/Stack/${image.name}.svg`} />;
+  });
+
   return (
     <Slideshow>
-      <ImagesContainer>
-        <div><Image height={150} width={200} src="/Stack/HTML.svg" /></div>
-
-        <Image height={150} width={200} src="/Stack/CSS.svg" />
-
-        <Image height={150} width={200} src="/Stack/Javascript.svg" />
-
-        <Image height={150} width={200} src="/Stack/React.svg" />
-
-        <Image height={150} width={200} src="/Stack/Nextjs.svg" />
-
-        <Image height={150} width={200} src="/Stack/Nodejs.svg" />
-
-        <Image height={150} width={200} src="/Stack/Firebase.svg" />
-
-        <Image height={150} width={200} src="/Stack/Mongodb.svg" />
-
-        <Image height={150} width={200} src="/Stack/Mysql.svg" />
-
-        <Image height={150} width={200} src="/Stack/Figma.svg" />
-      </ImagesContainer>
+      <ImagesContainer>{imageElements}</ImagesContainer>
     </Slideshow>
   );
 };

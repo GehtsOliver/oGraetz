@@ -1,20 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
-
-const Page = styled.section`
-  min-width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Heading = styled.h1`
-  color: #2e0347;
-  font-size: 2rem;
-`;
+import Heading from "../utility/Heading"
+import Page from "../utility/Page"
 
 const Container = styled.div`
 display: flex;

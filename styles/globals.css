@@ -32,6 +32,14 @@ a{
   color: var(--primary-white);
 }
 
+  .Selected {
+    border-bottom: 3px solid #fff;
+  }
+
+  button {
+    outline: none;
+    border: none;
+  }
 
 
 

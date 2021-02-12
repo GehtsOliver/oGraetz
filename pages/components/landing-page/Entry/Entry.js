@@ -35,11 +35,11 @@ const injectTitle = () => {
   const titleElementOne = document.createElement("h1");
   const titleElementTwo = document.createElement("h1");
   const titleElementThree = document.createElement("h1");
-  titleElementOne.className = "animate__animated animate__fadeIn"
-  titleElementTwo.className = "animate__animated animate__fadeIn"
-  titleElementThree.className = "animate__animated animate__fadeIn"
+  titleElementOne.className = "animate__animated animate__fadeIn";
+  titleElementTwo.className = "animate__animated animate__fadeIn";
+  titleElementThree.className = "animate__animated animate__fadeIn";
   titleElementOne.innerText = "Hi.";
-  
+
   titleElementTwo.innerText = "I am Oliver.";
   titleElementThree.innerText = "I am a Web Developer.";
   titleContainer.append(titleElementOne);
@@ -48,9 +48,12 @@ const injectTitle = () => {
     titleContainer.append(titleElementTwo);
   }, 4000);
   setTimeout(() => {
-    titleContainer.removeChild(titleElementTwo)
+    titleContainer.removeChild(titleElementTwo);
     titleContainer.append(titleElementThree);
   }, 8000);
+  setTimeout(() => {
+    titleContainer.removeChild(titleElementThree);
+  }, 12000);
 };
 
 const Entry = () => {
@@ -62,9 +65,7 @@ const Entry = () => {
     <>
       <Page>
         <Header />
-        <TitleContainer className="Title-Container">
-        
-        </TitleContainer>
+        <TitleContainer className="Title-Container"></TitleContainer>
       </Page>
       <Darklayer />
     </>
