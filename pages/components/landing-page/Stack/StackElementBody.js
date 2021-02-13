@@ -55,13 +55,16 @@ const StackElementBody = styled(Body)`
   }
 
   > div {
-      width: 50%;
+      width: 60%;
       margin: 1rem auto 2rem auto;
       padding: 1rem;
       border-radius: 3rem;
       display: flex;
       justify-content: center;
       background: #fff;
+      @media (max-width: 1000px){
+        width: 100%;
+      }
   }
 `;
 

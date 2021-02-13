@@ -15,12 +15,12 @@ const Vid = styled.video`
 
   position: relative;
   margin: 0;
-  top: -8.2rem;
+  top: -9rem;
   bottom: 0;
   right: 0;
   left: 0;
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1800px) {
     width: auto;
     height: 100%;
     top: 0;
@@ -32,7 +32,7 @@ const Video = () => {
     <VideoContainer>
       <Vid autoPlay muted loop>
         <source
-          src="https://anima-uploads.s3.amazonaws.com/projects/601e5d01c1395392d3d5910b/files/entry-bg-video.mp4"
+          src="/Entry-Bg-Video.mp4"
           type="video/mp4"
         />
       </Vid>

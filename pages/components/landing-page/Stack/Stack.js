@@ -8,20 +8,25 @@ import Heading from "../utility/Heading"
 import Page from "../utility/Page"
 
 const Card = styled.div`
-  width: 60%;
-  height: 50vh;
+  width: 50%;
+  min-height: 60%;
   border-radius: 1rem;
   background-color: #2e0347;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1000px){
+    width: 90%;
+  
+  }
 `;
 
 const HeaderDiv = styled.div`
-  width: 100%;
+  // width: 80%;
   justify-content: center;
   display: flex;
-  column-gap: 3rem;
+  column-gap: 1.5rem;
 `;
 
 const headers = ["Frontend", "Backend", "Database", "Design"];

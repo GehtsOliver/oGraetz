@@ -10,6 +10,10 @@ const StackElementHeader = styled.button`
   font-weight: bold;
   padding-bottom: .5rem;
 
+  @media (max-width: 1000px){
+    font-size: 1rem;
+    }
+
   .Selected {
     border-bottom: 3px solid #fff !important;
   }

@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-import Header from "../../partials/Header";
+import React, { useEffect, useState } from "react";
+import Header from "../utility/Header";
 import styled from "styled-components";
+import BurgerMenu from "./BurgerMenu"
 
 const Page = styled.section`
   min-width: 100vw;
@@ -57,6 +58,8 @@ const injectTitle = () => {
 };
 
 const Entry = () => {
+  const [burgerClicked, setBurgerClicked] = useState(false);
+
   useEffect(() => {
     injectTitle();
   }, []);
@@ -64,8 +67,12 @@ const Entry = () => {
   return (
     <>
       <Page>
-        <Header />
-        <TitleContainer className="Title-Container"></TitleContainer>
+        <Header
+          burgerClicked={burgerClicked}
+          setBurgerClicked={setBurgerClicked}
+        />
+        <TitleContainer className="Title-Container" />
+      {burgerClicked && <BurgerMenu/>}
       </Page>
       <Darklayer />
     </>
