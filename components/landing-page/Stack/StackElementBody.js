@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image"
+import Image from "next/image";
 import styled from "styled-components";
 import {
   frontendContent,
@@ -34,7 +34,14 @@ const Body = ({ selectedElement, className }) => {
   }
 
   let images = content.images.map((image) => {
-    return <Image key={image.split(".")[0]} src={`/Stack/${image}`} height={50} width={100}/>
+    return (
+      <Image
+        key={image.split(".")[0]}
+        src={`/Stack/${image}`}
+        height={50}
+        width={100}
+      />
+    );
   });
 
   return (
@@ -48,23 +55,23 @@ const Body = ({ selectedElement, className }) => {
 
 const StackElementBody = styled(Body)`
   font-size: 1rem;
-  padding: .5rem 4rem;
+  padding: 1rem 4rem 4rem 4rem;
   line-height: 1.6;
   > p {
     color: white;
   }
 
   > div {
-      width: 60%;
-      margin: 1rem auto 2rem auto;
-      padding: 1rem;
-      border-radius: 3rem;
-      display: flex;
-      justify-content: center;
-      background: #fff;
-      @media (max-width: 1000px){
-        width: 100%;
-      }
+    width: 60%;
+    margin: 1rem auto 2rem auto;
+    padding: 1rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
   }
 `;
 

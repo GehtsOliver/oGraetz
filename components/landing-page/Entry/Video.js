@@ -5,17 +5,18 @@ const VideoContainer = styled.div`
   position: absolute;
   top: 0rem;
   left: 0;
-  width: 100vw;
+  width: 1000vw;
   height: 100vh;
   z-index: -1000;
+  overflow: hidden;
 `;
 
 const Vid = styled.video`
-  width: 100%;
-
+  width: 100vw;
+  height: 115vh !important;
   position: relative;
   margin: 0;
-  top: -9rem;
+  top: 0rem;
   bottom: 0;
   right: 0;
   left: 0;

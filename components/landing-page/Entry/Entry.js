@@ -59,10 +59,17 @@ const injectTitle = () => {
 
 const Entry = () => {
   const [burgerClicked, setBurgerClicked] = useState(false);
+  const [introPlayed, setIntroPlayed] = useState(false);
 
   useEffect(() => {
-    injectTitle();
-  }, []);
+    if(localStorage.getItem("introPlayed")||introPlayed){
+      setIntroPlayed(true)
+    }else {
+      injectTitle();
+      localStorage.setItem("introPlayed", "true")
+    }
+
+  }, [introPlayed]);
 
   return (
     <>

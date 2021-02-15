@@ -8,7 +8,7 @@ const Page = styled.section`
   overflow: hidden;
 
   @media (max-width: 1000px) {
-    height: 80vh;
+    height: 50vh;
   }
 `;
 
@@ -24,7 +24,7 @@ const FooterContainer = styled.div`
   @media (max-width: 1000px) {
     position: relative;
     left: 0;
-    bottom: -80px;
+    bottom: 100px;
     border-radius: 0;
     width: 100vw;
     height: 20rem;
@@ -50,12 +50,13 @@ const FooterElement = styled.footer`
   @media (max-width: 1000px) {
     width: 100%;
     position: relative;
-    top: 22rem;
+    top: 10rem;
     left: 0;
   }
 
   > h3 {
     color: #fff;
+    font-size: 1rem;
   }
 
   > div {
