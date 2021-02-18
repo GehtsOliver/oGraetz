@@ -20,7 +20,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 2rem;
-border-radius: 30rem;
+border-radius: 1rem;
 opacity: 0.8;
 `;
 

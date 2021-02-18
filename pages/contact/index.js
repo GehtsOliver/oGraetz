@@ -6,23 +6,23 @@ import HeadElement from "../../components/partials/Head";
 import Page from "../../components/landing-page/utility/Page";
 import StyledHeader from "../../components/landing-page/utility/Header";
 import BurgerMenu from "../../components/landing-page/Entry/BurgerMenu";
-import Message from "../../components/landing-page/utility/Message"
+import Message from "../../components/landing-page/utility/Message";
 
 const StyledPage = styled(Page)`
-  min-height: 100vh;
+  min-height: 90vh;
   overflow: hidden;
   background: none;
 `;
 
 const Form = styled("form")`
   position: relative;
-  top: 3rem;
+  top: 4rem;
   overflow: hidden;
   display: flex;
-  row-gap: 2.5rem;
-  padding: 3rem;
-  height: 45rem;
-  width: 40%;
+  row-gap: 2rem;
+  padding: 2rem;
+  height: 40rem;
+  width: 30%;
   flex-direction: column;
   background: white;
   border-radius: 5%;
@@ -90,7 +90,7 @@ const index = () => {
     e.preventDefault();
     const data = { name, email, number, message };
     try {
-      const res = await fetch("http://localhost:3000/api/contact", {
+      const res = await fetch("http://o-graetz.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -100,11 +100,11 @@ const index = () => {
 
       if (res.status === 200) {
         setStatusMessage(
-          "Thank you for getting in touch with me. I will get back to you ASAP."
+          "Thank you for getting in touch. I will get back to you ASAP."
         );
       }
-    } catch {
-      setError("Something didn't work out well. Please, try again.");
+    } catch (err) {
+      setError(`An error occured: ${err}`);
     }
   };
 
@@ -120,6 +120,8 @@ const index = () => {
         {error && <h1>{error}</h1>}
         {statusMessage && !burgerClicked ? (
           <Message statusMessage={statusMessage} />
+        ) : statusMessage && burgerClicked ? (
+          <BurgerMenu />
         ) : !statusMessage && burgerClicked ? (
           <BurgerMenu />
         ) : (
@@ -165,7 +167,7 @@ const index = () => {
               <textarea
                 name="message"
                 required
-                placeholder="Hi Oliver, my name is John and I want to give you all my money. Just contact me!"
+                placeholder="Hi Oliver, I am interested in you and me working together. Please, contact me."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>

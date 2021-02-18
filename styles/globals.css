@@ -5,6 +5,7 @@ body {
   font-family: 'Work Sans', "Roboto";
     color: var(--primary-white);
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 :root{
