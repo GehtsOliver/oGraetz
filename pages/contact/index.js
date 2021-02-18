@@ -104,7 +104,7 @@ const index = () => {
         );
       }
     } catch (err) {
-      setError(`An error occured: ${rr}`);
+      setError(`An error occured: ${err}`);
     }
   };
 
