@@ -90,7 +90,7 @@ const index = () => {
     e.preventDefault();
     const data = { name, email, number, message };
     try {
-      const res = await fetch("http://o-graetz.vercel.app/api/contact", {
+      const res = await fetch("http://localhost:3000/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const index = () => {
         );
       }
     } catch (err) {
-      setError(`An error occured: ${err}`);
+      setError(`An error occured: ${rr}`);
     }
   };
 
