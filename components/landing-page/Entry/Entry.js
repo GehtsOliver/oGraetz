@@ -1,23 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Header from "../utility/Header";
 import styled from "styled-components";
-import BurgerMenu from "./BurgerMenu"
+import BurgerMenu from "./BurgerMenu";
 
 const Page = styled.section`
   min-width: 100vw;
   height: 100vh;
   padding: 0 3rem;
-`;
-
-const Darklayer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  background-color: black;
-  opacity: 0.6;
-  z-index: -100;
 `;
 
 const TitleContainer = styled.h1`
@@ -62,13 +51,12 @@ const Entry = () => {
   const [introPlayed, setIntroPlayed] = useState(false);
 
   useEffect(() => {
-    if(localStorage.getItem("introPlayed")||introPlayed){
-      setIntroPlayed(true)
-    }else {
+    if (localStorage.getItem("introPlayed") || introPlayed) {
+      setIntroPlayed(true);
+    } else {
       injectTitle();
-      localStorage.setItem("introPlayed", "true")
+      localStorage.setItem("introPlayed", "true");
     }
-
   }, [introPlayed]);
 
   return (
@@ -79,9 +67,8 @@ const Entry = () => {
           setBurgerClicked={setBurgerClicked}
         />
         <TitleContainer className="Title-Container" />
-      {burgerClicked && <BurgerMenu/>}
+        {burgerClicked && <BurgerMenu />}
       </Page>
-      <Darklayer />
     </>
   );
 };

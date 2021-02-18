@@ -3,9 +3,9 @@ import Link from "next/link";
 import styled from "styled-components";
 import BurgerIcon from "./HamburgerMenu";
 
-const Header = ({ burgerClicked, setBurgerClicked }) => {
+const Header = ({ burgerClicked, setBurgerClicked, className }) => {
   return (
-    <header>
+    <header className={className}>
       <h1>oGraetz</h1>
       <nav role="navigation">
         <Link href="/">Home</Link>
@@ -31,6 +31,10 @@ const StyledHeader = styled(Header)`
   align-items: center;
   padding: 2rem 3rem;
   z-index: 1000;
+
+  h1{
+    color: ${(props) => (props.dark ? "#000" : "#fff")}
+  }
   a {
     color: ${(props) => (props.dark ? "#000" : "#fff")};
     padding-bottom: 0.3rem;

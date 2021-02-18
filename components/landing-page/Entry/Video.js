@@ -28,16 +28,27 @@ const Vid = styled.video`
   }
 `;
 
+const Darklayer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: black;
+  opacity: 0.6;
+  z-index: -100;
+`;
+
 const Video = () => {
   return (
-    <VideoContainer>
-      <Vid autoPlay muted loop>
-        <source
-          src="/Entry-Bg-Video.mp4"
-          type="video/mp4"
-        />
-      </Vid>
-    </VideoContainer>
+    <>
+      <Darklayer />
+      <VideoContainer>
+        <Vid autoPlay muted loop>
+          <source src="/Entry-Bg-Video.mp4" type="video/mp4" />
+        </Vid>
+      </VideoContainer>
+    </>
   );
 };
 

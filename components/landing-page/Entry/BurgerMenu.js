@@ -1,35 +1,52 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link"
+import Link from "next/link";
 
 const MenuNode = ({ className }) => {
   return (
     <nav className={className} role="navigation">
-      <Link href="#About">About</Link>
-      <Link href="/projects">Projects</Link>
-      <Link href="/articles">Articles</Link>
-      <Link href="/contact">Hire</Link>
+      <div>
+        <i className="fas fa-home fa-2x"></i>
+        <Link href="/">Home</Link>
+      </div>
+      <div>
+        <i className="far fa-address-book fa-2x"></i>
+        <Link href="/projects">Projects</Link>
+      </div>
+      <div>
+        <i className="fas fa-rss fa-2x"></i>
+        <Link href="/articles">Articles</Link>
+      </div>
+      <div>
+        <i className="fas fa-envelope fa-2x"></i>
+        <Link href="/contact">Hire</Link>
+      </div>
     </nav>
   );
 };
 
 const BurgerMenu = styled(MenuNode)`
-height: 80%;
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-row-gap: 2rem;
-justify-content: center;
-> a {
-    color: #fff;
-    font-weight: 200;
-    font-size: 30px;
-}
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  justify-content: center;
 
-> a:hover {
-    font-weight: 400;
-}
+  > div {
+    display: flex;
+    align-items: center;
+  }
+  > div > a {
+    margin-left: 0.5rem;
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    :hover {
+      font-weight: 400;
+    }
+  }
 `;
 
 export default BurgerMenu;
