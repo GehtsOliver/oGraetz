@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ContactBtn from "../landing-page/utility/ContactBtn";
+import ContactBtn from "../utility/ContactBtn";
 
 const Page = styled.section`
   width: 100vw;

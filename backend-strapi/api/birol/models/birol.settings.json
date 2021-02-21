@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "birols",
+  "info": {
+    "name": "Birol"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nummer": {
+      "type": "string"
+    }
+  }
+}

@@ -3,11 +3,11 @@ import Link from "next/link";
 import styled from "styled-components";
 import BurgerIcon from "./HamburgerMenu";
 
-const Header = ({ burgerClicked, setBurgerClicked, className }) => {
+const Navbar = ({ burgerClicked, setBurgerClicked, className }) => {
   return (
-    <header className={className}>
+    <nav className={className}>
       <h1>oGraetz</h1>
-      <nav role="navigation">
+      <div role="navigation">
         <Link href="/">Home</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/articles">Articles</Link>
@@ -16,12 +16,12 @@ const Header = ({ burgerClicked, setBurgerClicked, className }) => {
           burgerClicked={burgerClicked}
           setBurgerClicked={setBurgerClicked}
         />
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 };
 
-const StyledHeader = styled(Header)`
+const StyledNavbar = styled(Navbar)`
   position: absolute;
   top: 0;
   left: 0;
@@ -39,10 +39,10 @@ const StyledHeader = styled(Header)`
     color: ${(props) => (props.dark ? "#000" : "#fff")};
     padding-bottom: 0.3rem;
     margin-right: 5rem;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 30px;
     :hover {
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid ${(props) => (props.dark ? "#000" : "#fff")};
     }
     @media (max-width: 1000px) {
       display: none;
@@ -50,4 +50,4 @@ const StyledHeader = styled(Header)`
   }
 `;
 
-export default StyledHeader;
+export default StyledNavbar;

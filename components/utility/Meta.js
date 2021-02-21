@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
 
-const HeadElement = () => {
+const Meta = ({ title = "oGraetz" }) => {
   return (
     <Head>
-      <title>oGraetz</title>
+      <title>{title}</title>
       <link rel="icon" href="/favicon.ico" />
       <link
         rel="stylesheet"
@@ -29,4 +29,4 @@ const HeadElement = () => {
   );
 };
 
-export default HeadElement;
+export default Meta;

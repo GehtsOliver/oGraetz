@@ -1,5 +1,4 @@
 
-import HeadElement from "../components/partials/Head"
 import Entry from "../components/landing-page/Entry/Entry";
 import About from "../components/landing-page/About/About";
 import Video from "../components/landing-page/Entry/Video";
@@ -9,8 +8,6 @@ import Footer from "../components/partials/Footer";
 export default function Home() {
   return (
     <>
-      <HeadElement />
-
       <Video />
 
       <Entry />

@@ -16,15 +16,14 @@ const Vid = styled.video`
   height: 115vh !important;
   position: relative;
   margin: 0;
-  top: 0rem;
+  top: 0;
   bottom: 0;
   right: 0;
   left: 0;
 
   @media (max-width: 1800px) {
     width: auto;
-    height: 100%;
-    top: 0;
+    height: 100vh;
   }
 `;
 

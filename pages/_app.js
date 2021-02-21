@@ -1,9 +1,12 @@
 import "../styles/globals.css";
-import HeadElement from "../components/partials/Head";
+import Meta from "../components/utility/Meta";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Component {...pageProps}/>
+    <>
+      <Meta />
+      <Component {...pageProps} />
+    </>
   );
 }
 

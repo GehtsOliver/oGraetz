@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import Video from "../../components/landing-page/Entry/Video";
-import HeadElement from "../../components/partials/Head";
-import Page from "../../components/landing-page/utility/Page";
-import StyledHeader from "../../components/landing-page/utility/Header";
-import BurgerMenu from "../../components/landing-page/Entry/BurgerMenu";
-import Message from "../../components/landing-page/utility/Message";
+import Page from "../../components/utility/Page";
+import Navbar from "../../components/utility/Navbar";
+import BurgerMenu from "../../components/utility/BurgerMenu";
+import Message from "../../components/utility/Message";
+import Meta from "../../components/utility/Meta"
 
 const StyledPage = styled(Page)`
   min-height: 90vh;
@@ -110,8 +110,8 @@ const index = () => {
 
   return (
     <>
-      <HeadElement />
-      <StyledHeader
+      <Meta title="Contact Me"/>
+      <Navbar
         burgerClicked={burgerClicked}
         setBurgerClicked={setBurgerClicked}
       />

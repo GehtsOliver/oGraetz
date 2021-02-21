@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
-import Heading from "../utility/Heading";
-import Page from "../utility/Page";
+import Heading from "../../utility/Heading";
+import Page from "../../utility/Page";
 
 const Container = styled.div`
   display: flex;

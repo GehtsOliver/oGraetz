@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Projects"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Excerpt": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Tags": {
+      "type": "string"
+    },
+    "Stack": {
+      "type": "enumeration",
+      "enum": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "NextJS",
+        "MongoDB",
+        "MySQL",
+        "Firebase"
+      ]
+    }
+  }
+}

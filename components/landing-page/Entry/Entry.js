@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Header from "../utility/Header";
+import Nav from "../../utility/Navbar";
 import styled from "styled-components";
-import BurgerMenu from "./BurgerMenu";
+import BurgerMenu from "../../utility/BurgerMenu";
 
 const Page = styled.section`
   min-width: 100vw;
@@ -62,7 +62,7 @@ const Entry = () => {
   return (
     <>
       <Page>
-        <Header
+        <Nav
           burgerClicked={burgerClicked}
           setBurgerClicked={setBurgerClicked}
         />

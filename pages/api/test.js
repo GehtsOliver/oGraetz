@@ -1,4 +1,3 @@
-export default async (req, res) => {
-    res.send("Hallo")
-
-}
+module.exports = (req, res) => {
+  res.send("Hallo");
+};

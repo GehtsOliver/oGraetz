@@ -4,8 +4,8 @@ import styled from "styled-components";
 import Banner from "./Banner";
 import StackElementHeader from "./StackElementHeader";
 import StackElementBody from "./StackElementBody.js";
-import Heading from "../utility/Heading"
-import Page from "../utility/Page"
+import Heading from "../../utility/Heading"
+import Page from "../../utility/Page"
 
 const Card = styled.div`
   width: 50%;
