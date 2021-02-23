@@ -7,7 +7,7 @@ import ProjectList from "../../components/projects/ProjectList";
 
 const StyledPage = styled(Page)`
   background-color: #fff;
-
+  justify-content: normal;
   >nav {
     border-bottom: 1px solid #000;
   }
@@ -18,7 +18,9 @@ const index = () => {
   return (
     <StyledPage>
       <Navbar dark />
+      <main>
       <ProjectList />
+      </main>
     </StyledPage>
   );
 };

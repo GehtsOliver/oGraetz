@@ -36,3 +36,5 @@ yarn-error.log*
 ./pages/components/landing-page/Specialisation
 
 .vercel
+
+./backend-strapi
