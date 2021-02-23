@@ -6,7 +6,7 @@ import Page from "../../components/utility/Page";
 import Navbar from "../../components/utility/Navbar";
 import BurgerMenu from "../../components/utility/BurgerMenu";
 import Message from "../../components/utility/Message";
-import Meta from "../../components/utility/Meta"
+import Meta from "../../components/utility/Meta";
 
 const StyledPage = styled(Page)`
   min-height: 90vh;
@@ -110,7 +110,7 @@ const index = () => {
 
   return (
     <>
-      <Meta title="Contact Me"/>
+      <Meta title="Contact Me" />
       <Navbar
         burgerClicked={burgerClicked}
         setBurgerClicked={setBurgerClicked}
@@ -178,7 +178,6 @@ const index = () => {
           </Form>
         )}
       </StyledPage>
-      
     </>
   );
 };

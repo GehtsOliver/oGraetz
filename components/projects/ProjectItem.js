@@ -7,7 +7,7 @@ import styled from "styled-components";
 const Project = ({ project, className }) => {
   const tagsArr = project.Tags.split(",");
   return (
-    <Link href={`/projects/${project.title}`}>
+    <Link href={`/projects/${project.id}`}>
       <article className={className}>
         <h1>{project.title}</h1>
         <Image
