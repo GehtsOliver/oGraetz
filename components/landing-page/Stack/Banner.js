@@ -38,8 +38,6 @@ const ImagesContainer = styled.div`
     cursor: pointer;
     transition: all 1s;
     transform: scale3d(1.1, 1.1, 1.1);
-    box-shadow: 0.5rem 0.5rem 0.5rem 0rem gray;
-    border-radius: 100%;
   }
 
  
@@ -61,8 +59,6 @@ display: none;
   cursor: pointer;
   transition: all 1s;
   transform: scale3d(1.1, 1.1, 1.1);
-  box-shadow: 0.5rem 0.5rem 0.1rem 0rem gray;
-  border-radius: 30%;
 }
 
 `;

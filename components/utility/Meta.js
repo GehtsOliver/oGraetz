@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-const Meta = ({ title = "oGraetz" }) => {
+const Meta = ({ title = "oGraetz - Web Developer" }) => {
   return (
     <Head>
       <title>{title}</title>

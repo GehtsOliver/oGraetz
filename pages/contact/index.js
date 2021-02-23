@@ -178,7 +178,7 @@ const index = () => {
           </Form>
         )}
       </StyledPage>
-      )
+      
     </>
   );
 };
