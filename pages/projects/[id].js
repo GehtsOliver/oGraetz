@@ -1,6 +1,7 @@
 import React from "react";
 import Page from "../../components/utility/Page"
 import Navbar from "../../components/utility/Navbar"
+import ProjectBody from "../../components/projects/ProjectBody";
 
 const Project = ({ project }) => {
 
@@ -8,6 +9,7 @@ const Project = ({ project }) => {
   return(
     <Page>
       <Navbar dark/>
+      <ProjectBody project={project}/>
     </Page>
   );
 };

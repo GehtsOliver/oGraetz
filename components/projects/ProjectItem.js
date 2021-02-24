@@ -5,7 +5,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Project = ({ project, className }) => {
-  const tagsArr = project.Tags.split(",");
+  const tagsArr = project.tags.split(",");
   return (
     <Link href={`/projects/${project.id}`}>
       <article className={className}>
@@ -14,11 +14,11 @@ const Project = ({ project, className }) => {
           alt={project.title}
           width={400}
           height={200}
-          src={project.Image.url}
+          src={project.image.url}
         />
-        <p>{project.Excerpt}</p>
+        <p>{project.excerpt}</p>
         <div>
-          {project.Tags ? tagsArr.map((tag) => <div key={tag}>{tag}</div>) : ""}
+          {project.tags ? tagsArr.map((tag) => <div key={tag}>{tag}</div>) : ""}
         </div>
       </article>
     </Link>

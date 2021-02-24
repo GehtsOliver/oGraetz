@@ -14,13 +14,13 @@
     "title": {
       "type": "string"
     },
-    "Excerpt": {
+    "excerpt": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Image": {
+    "img": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -31,23 +31,13 @@
       "plugin": "upload",
       "required": false
     },
-    "Tags": {
+    "tags": {
       "type": "string"
     },
-    "Stack": {
-      "type": "enumeration",
-      "enum": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "NextJS",
-        "MongoDB",
-        "MySQL",
-        "Firebase"
-      ]
+    "url": {
+      "type": "string"
     },
-    "URL": {
+    "tech": {
       "type": "string"
     }
   }
