@@ -18,13 +18,13 @@ const Main = styled.main`
     border-radius: 30px;
   }
 
-    .tag{
-        background: #fff;
-        color: #000;
-        border-radius: 20px;
-        padding: .5rem;
-        font-weight: bold;
-    }  
+  .tag {
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    padding: 0.5rem;
+    font-weight: bold;
+  }
 
   p {
     color: #fff;
@@ -47,7 +47,7 @@ const ProjectBody = ({ project }) => {
         <p>Technologies used: {project.stack}</p>
       </section>
       <section>
-        <Image width={700} height={350} src={project.image.url} />
+        <Image width={700} height={350} src={project.img.url} />
       </section>
     </Main>
   );

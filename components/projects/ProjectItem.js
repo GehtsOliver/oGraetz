@@ -5,7 +5,9 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Project = ({ project, className }) => {
-  const tagsArr = project.tags.split(",");
+  console.log(project);
+  let tagsArr = null;
+  project.tags ? (tagsArr = project.tags.split(",")) : "";
   return (
     <Link href={`/projects/${project.id}`}>
       <article className={className}>
@@ -14,7 +16,7 @@ const Project = ({ project, className }) => {
           alt={project.title}
           width={400}
           height={200}
-          src={project.image.url}
+          src={project.img.url}
         />
         <p>{project.excerpt}</p>
         <div>
@@ -41,16 +43,21 @@ const ProjectItem = styled(Project)`
 
   > div {
     display: flex;
-    column-gap: 1rem;
+    justify-content: space-between;
+    column-gap: 0.3rem;
   }
 
   > div > div {
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
     background: #2e0347;
     color: #fff;
     font-weight: bold;
     border: 1px solid gray;
     border-radius: 20px;
-    padding: 0.3rem;
+    padding: 0.5rem;
   }
 `;
 
