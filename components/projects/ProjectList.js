@@ -5,22 +5,25 @@ import ProjectItem from "./ProjectItem";
 
 const ProjectList = ({ className }) => {
   const [fetchedProjects, setFetchedProjects] = useState([]),
-       [loading, setLoading] = useState(false);
+    [loading, setLoading] = useState(false);
 
   useEffect(async () => {
-    setLoading(true)
-    const response = await fetch("https://ograetz-strapi.herokuapp.com/projects");
-    const data  = await response.json()
+    setLoading(true);
+    const response = await fetch(
+      "https://ograetz-strapi.herokuapp.com/projects"
+    );
+    const data = await response.json();
     setFetchedProjects(data);
-    setLoading(false)
+    setLoading(false);
   }, []);
 
   return (
     <div className={className}>
-      <h1>{loading ? "Loading" : ""}</h1>
-      {fetchedProjects ? fetchedProjects.map((project, index) => (
-        <ProjectItem key={project.title + index} project={project} />
-      )) : ""}
+      {fetchedProjects
+        ? fetchedProjects.map((project, index) => (
+            <ProjectItem key={project.title + index} project={project} />
+          ))
+        : ""}
     </div>
   );
 };

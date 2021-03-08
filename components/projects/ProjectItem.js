@@ -29,10 +29,9 @@ const Project = ({ project, className }) => {
 
 const ProjectItem = styled(Project)`
   color: #000;
-  width: 25rem;
+  width: 20rem;
   border-radius: 2rem;
   padding: 0.5rem 2rem;
-
   cursor: pointer;
   box-shadow: 0.3rem 0.3rem 10px 0px #2e0347;
 
@@ -42,9 +41,10 @@ const ProjectItem = styled(Project)`
   }
 
   > div {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    column-gap: 0.3rem;
+    column-gap: 0.5rem;
   }
 
   > div > div {
