@@ -29,14 +29,19 @@ const ProjectList = ({ className }) => {
 };
 
 const StyledProjectList = styled(ProjectList)`
-  position: relative;
-  top: 15rem;
-  left: 5rem;
   width: 80%;
+  height: 100%;
+  padding: 2rem;
   display: grid;
   row-gap: 2rem;
   column-gap: 3rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export default StyledProjectList;

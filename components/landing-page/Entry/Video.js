@@ -3,28 +3,17 @@ import styled from "styled-components";
 
 const VideoContainer = styled.div`
   position: absolute;
-  top: 0rem;
+  top: 0;
   left: 0;
-  width: 1000vw;
+  width: 100%;
   height: 100vh;
   z-index: -1000;
   overflow: hidden;
 `;
 
 const Vid = styled.video`
-  width: 100vw;
-  height: 115vh !important;
+  height: 130% !important;
   position: relative;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-
-  @media (max-width: 1800px) {
-    width: auto;
-    height: 100vh;
-  }
 `;
 
 const Darklayer = styled.div`

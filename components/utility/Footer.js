@@ -22,19 +22,12 @@ const FooterContainer = styled.div`
   bottom: -100px;
 
   @media (max-width: 1000px) {
-    position: relative;
-    left: 0;
-    bottom: 100px;
-    border-radius: 0;
-    width: 100vw;
-    height: 20rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 `;
 
 const FooterElement = styled.footer`
+  background: #2e0347;
   width: 50rem;
   position: relative;
   z-index: 1000;
@@ -48,9 +41,10 @@ const FooterElement = styled.footer`
   text-transform: uppercase;
 
   @media (max-width: 1000px) {
+    padding: 2rem 0 8rem 0;
     width: 100%;
     position: relative;
-    top: 10rem;
+    top: 0rem;
     left: 0;
   }
 

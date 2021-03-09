@@ -3,13 +3,14 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-const Main = styled.main`
-  background: #2e0347;
-  width: 80%;
-  height: 40rem;
+const SingleProjectWrapper = styled.main`
+  margin-top: 1rem;
+  background: #fff;
+  width: 60%;
+  height: 30rem;
   padding: 2rem;
   border-radius: 2rem;
-  color: #fff;
+  color: #2e0347;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +18,7 @@ const Main = styled.main`
 
   h1 {
     font-size: 1.5rem;
+    color: #2e0347;
   }
 
   div {
@@ -36,7 +38,8 @@ const Main = styled.main`
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 1.5rem;
+    color: #2e0347;
 
     > div {
       display: flex;
@@ -49,19 +52,19 @@ const Main = styled.main`
     align-items: center;
     justify-content: center;
     max-width: 8rem;
-    background: #fff;
-    color: #000;
+    background: #2e0347;
+    color: #fff;
     border-radius: 20px;
     padding: 0.5rem;
     font-weight: bold;
   }
 
   p {
-    color: #fff;
+    color: #2e347;
   }
 `;
 
-const ProjectBody = ({ project }) => {
+const SingleProject = ({ project }) => {
   const tagsArr = project.tags.split(",");
   const techArr = project.tech.split(",");
   const usedTech = techArr.map((tech) => (
@@ -74,7 +77,7 @@ const ProjectBody = ({ project }) => {
   ));
 
   return (
-    <Main>
+    <SingleProjectWrapper>
       <article>
         <h1>{project.title}</h1>
         <div>
@@ -92,8 +95,8 @@ const ProjectBody = ({ project }) => {
           <Image width={700} height={350} src={project.img.url} />
         </a>
       </section>
-    </Main>
+    </SingleProjectWrapper>
   );
 };
 
-export default ProjectBody;
+export default SingleProject;

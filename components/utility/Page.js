@@ -1,17 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Page = ({ children, className, id="" }) => {
-  return <section id={id} className={className}>{children}</section>;
+const Page = ({ children, className, id = "" }) => {
+  return (
+    <section id={id} className={className}>
+      {children}
+    </section>
+  );
 };
 
 const PageContainer = styled(Page)`
-  min-width: 100vw;
-  min-height: 103vh;
+  width: 100vw;
+  min-height: 99vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: ${(props) => (props.justify ? "center" : "normal")};
+  padding: 0 2rem;
+  overflow-y: ${(props) => (props.hidden ? "hidden" : "")};
 `;
 
 export default PageContainer;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StackElementHeader = styled.button`
@@ -8,29 +8,26 @@ const StackElementHeader = styled.button`
   cursor: pointer;
   background: none;
   font-weight: bold;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 
-  @media (max-width: 1000px){
+  @media (max-width: 1000px) {
     font-size: 1rem;
-    }
+  }
 
   .Selected {
     border-bottom: 3px solid #fff !important;
   }
 
   :hover {
-    transform: scale3d(1.1, 1.1, 1.1)
-    
+    transform: scale3d(1.1, 1.1, 1.1);
   }
 `;
 
 const StackElement = ({ children, selectedElement, setSelectedElement }) => {
- 
-
   return (
-    <StackElementHeader 
-    className={children === selectedElement ? "Selected" : ""}
-    onClick={() => {
+    <StackElementHeader
+      className={children === selectedElement ? "Selected" : ""}
+      onClick={() => {
         setSelectedElement(children);
       }}
     >

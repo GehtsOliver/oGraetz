@@ -11,7 +11,7 @@ const Navbar = ({ burgerClicked, setBurgerClicked, className }) => {
         <Link href="/">Home</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/articles">Articles</Link>
-        <Link href="/contact">Hire</Link>
+        <Link href="/contact">Contact</Link>
         <BurgerIcon
           burgerClicked={burgerClicked}
           setBurgerClicked={setBurgerClicked}
@@ -22,25 +22,23 @@ const Navbar = ({ burgerClicked, setBurgerClicked, className }) => {
 };
 
 const StyledNavbar = styled(Navbar)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 1rem 0;
   z-index: 1000;
 
-  h1{
-    color: ${(props) => (props.dark ? "#000" : "#fff")}
+  h1 {
+    color: ${(props) => (props.dark ? "#000" : "#fff")};
   }
   a {
     color: ${(props) => (props.dark ? "#000" : "#fff")};
     padding-bottom: 0.3rem;
     margin-right: 5rem;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 25px;
     :hover {
       border-bottom: 1px solid ${(props) => (props.dark ? "#000" : "#fff")};
     }

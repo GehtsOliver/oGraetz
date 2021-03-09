@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import Banner from "./Banner";
 import StackElementHeader from "./StackElementHeader";
 import StackElementBody from "./StackElementBody.js";
-import Heading from "../../utility/Heading"
-import Page from "../../utility/Page"
+import Heading from "../../utility/Heading";
+import Page from "../../utility/Page";
 
 const Card = styled.div`
   width: 50%;
@@ -16,17 +16,15 @@ const Card = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 1000px){
-    width: 90%;
-  
+  @media (max-width: 1000px) {
+    width: 100%;
   }
 `;
 
 const HeaderDiv = styled.div`
-  // width: 80%;
   justify-content: center;
   display: flex;
-  column-gap: 1.5rem;
+  column-gap: 1rem;
 `;
 
 const headers = ["Frontend", "Backend", "Database", "Design"];

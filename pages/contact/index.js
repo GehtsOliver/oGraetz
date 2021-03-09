@@ -9,15 +9,12 @@ import Message from "../../components/utility/Message";
 import Meta from "../../components/utility/Meta";
 
 const StyledPage = styled(Page)`
-  min-height: 90vh;
-  overflow: hidden;
+  min-height: 100vh;
   background: none;
+  justify-content: normal;
 `;
 
 const Form = styled("form")`
-  position: relative;
-  top: 4rem;
-  overflow: hidden;
   display: flex;
   row-gap: 2rem;
   padding: 2rem;
@@ -72,8 +69,13 @@ const Form = styled("form")`
     }
   }
 
-  @media (max-width: 1000px) {
-    width: 90%;
+  @media (max-width: 1400px) {
+    width: 60%;
+  }
+
+  @media (max-width: 600px) {
+    width: 95%;
+    row-gap: 0.5rem;
   }
 `;
 
@@ -111,12 +113,12 @@ const index = () => {
   return (
     <>
       <Meta title="Contact Me" />
-      <Navbar
-        burgerClicked={burgerClicked}
-        setBurgerClicked={setBurgerClicked}
-      />
       <Video />
       <StyledPage>
+        <Navbar
+          burgerClicked={burgerClicked}
+          setBurgerClicked={setBurgerClicked}
+        />
         {error && <h1>{error}</h1>}
         {statusMessage && !burgerClicked ? (
           <Message statusMessage={statusMessage} />

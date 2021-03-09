@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   row-gap: 2rem;
-  
+
   > article {
     display: flex;
     width: 40%;
@@ -20,7 +20,7 @@ const Container = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column;
     row-gap: 4rem;
-    
+
     > article {
       width: 75%;
       margin: 0 auto;
@@ -29,12 +29,11 @@ const Container = styled.div`
       align-items: center;
     }
   }
-
 `;
 
 const About = () => {
   return (
-    <Page id="About">
+    <Page justify id="About">
       <Heading>About Me</Heading>
       <Container>
         <Image width={250} height={250} src="/avatar.svg"></Image>
@@ -43,13 +42,12 @@ const About = () => {
             Hey! <br />
             As you might have guessed, my name is Oliver and I am a Web
             Developer based in Vienna, Austria. Coding websites and applications
-            of any kind is my passion. I am 100% self-taught which represents
-            quite well how much I love doing it.
+            of any kind is my passion. I am 100% self-taught which resembles
+            fairly well how hooked I am to web development.
           </p>
           <p>
-            I put in hundreds and hundreds of hours to reach the level of being
-            capable of coding almost any website imagineable. There is barely a
-            challenge I am unable to surmount.
+            I put in hundreds and hundreds of hours to reach the level I am
+            currently at. There is barely a challenge I am unable to surmount.
           </p>
         </article>
       </Container>

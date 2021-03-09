@@ -2,26 +2,26 @@ import React from "react";
 import styled from "styled-components";
 
 import Page from "../../components/utility/Page";
+import Video from "../../components/landing-page/Entry/Video";
 import Navbar from "../../components/utility/Navbar";
 import ProjectList from "../../components/projects/ProjectList";
 
 const StyledPage = styled(Page)`
-  background-color: #fff;
+  background-color: transparent;
   justify-content: normal;
-  >nav {
-    border-bottom: 1px solid #000;
-  }
 `;
 
 const index = () => {
-
   return (
-    <StyledPage>
-      <Navbar dark />
-      <main>
-      <ProjectList />
-      </main>
-    </StyledPage>
+    <>
+      <Video />
+      <StyledPage>
+        <Navbar />
+        <main>
+          <ProjectList />
+        </main>
+      </StyledPage>
+    </>
   );
 };
 

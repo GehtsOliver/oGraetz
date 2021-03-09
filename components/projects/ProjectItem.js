@@ -29,14 +29,15 @@ const Project = ({ project, className }) => {
 
 const ProjectItem = styled(Project)`
   color: #000;
+  background: #fff;
   width: 20rem;
   border-radius: 2rem;
-  padding: 0.5rem 2rem;
+  padding: 1rem;
   cursor: pointer;
-  box-shadow: 0.3rem 0.3rem 10px 0px #2e0347;
+  box-shadow: 0.3rem 0.5rem 10px 0px #2e0347;
 
   :hover {
-    transform: scale3d(1.01, 1.01, 1.01);
+    transform: scale3d(1.05, 1.05, 1.05);
     transition: all 1s;
   }
 
