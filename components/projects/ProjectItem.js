@@ -5,7 +5,6 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const Project = ({ project, className }) => {
-  console.log(project);
   let tagsArr = null;
   project.tags ? (tagsArr = project.tags.split(",")) : "";
   return (
@@ -30,7 +29,7 @@ const Project = ({ project, className }) => {
 const ProjectItem = styled(Project)`
   color: #000;
   background: #fff;
-  width: 20rem;
+  width: 18rem;
   border-radius: 2rem;
   padding: 1rem;
   cursor: pointer;

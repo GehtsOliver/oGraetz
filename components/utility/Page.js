@@ -16,7 +16,7 @@ const PageContainer = styled(Page)`
   flex-direction: column;
   align-items: center;
   justify-content: ${(props) => (props.justify ? "center" : "normal")};
-  padding: 0 2rem;
+  padding: 0;
   overflow-y: ${(props) => (props.hidden ? "hidden" : "")};
 `;
 

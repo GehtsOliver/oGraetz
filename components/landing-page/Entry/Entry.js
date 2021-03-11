@@ -6,7 +6,6 @@ import BurgerMenu from "../../utility/BurgerMenu";
 const Page = styled.section`
   min-width: 100vw;
   height: 100vh;
-  padding: 0 3rem;
 `;
 
 const TitleContainer = styled.h1`
