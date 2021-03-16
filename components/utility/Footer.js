@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ContactBtn from "../utility/ContactBtn";
+import ContactBtn from "../utility/FooterBtn";
 
 const Page = styled.section`
   width: 100vw;
@@ -50,7 +50,7 @@ const FooterElement = styled.footer`
 
   > h3 {
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   > div {
