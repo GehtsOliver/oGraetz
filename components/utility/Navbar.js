@@ -4,46 +4,26 @@ import styled from "styled-components";
 import BurgerIcon from "./HamburgerMenu";
 import Image from "next/image";
 
-const Navbar = ({ burgerClicked, setBurgerClicked, className }) => {
-  return (
-    <nav className={className}>
-      <Image src="/oGrætz_light.svg" width={75} height={38} />
-      <div role="navigation">
-        <Link href="/">Home</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/articles">Articles</Link>
-        <Link href="/contact">Contact</Link>
-        <BurgerIcon
-          burgerClicked={burgerClicked}
-          setBurgerClicked={setBurgerClicked}
-        />
-      </div>
-    </nav>
-  );
-};
-
-const StyledNavbar = styled(Navbar)`
+const StyledNav = styled.nav`
   position: relative;
   left: 0;
   width: 100vw;
-  height: 2.5rem;
+  height: 2.7rem;
   display: flex;
-  background: #000;
+  background: #2e0347;
+  border-bottom: 1px solid #000;
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
   z-index: 1000;
 
-  h1 {
-    color: ${(props) => (props.dark ? "#000" : "#fff")};
-  }
   a {
-    padding-bottom: 0.3rem;
+    padding-bottom: 0;
     margin-right: 5rem;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     :hover {
-      transform: scale(1.05, 1.05, 1.05);
+      border-bottom 1px solid #fff;
     }
     @media (max-width: 1000px) {
       display: none;
@@ -51,4 +31,20 @@ const StyledNavbar = styled(Navbar)`
   }
 `;
 
-export default StyledNavbar;
+const Navbar = ({ className }) => {
+
+  return (
+    <StyledNav className={className}>
+      <Image src="/oGrætz_light.svg" width={75} height={38} />
+      <div role="navigation">
+        <Link href="/">Home</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/contact">Contact</Link>
+        <BurgerIcon />
+      </div>
+    </StyledNav>
+  );
+};
+
+export default Navbar;

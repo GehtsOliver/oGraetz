@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Nav from "../../utility/Navbar";
 import styled from "styled-components";
 import BurgerMenu from "../../utility/BurgerMenu";
+import { BurgerMenuContext } from "../../../context/BurgerMenuContext";
 
 const Page = styled.section`
   min-width: 100vw;
@@ -46,8 +47,12 @@ const injectTitle = () => {
 };
 
 const Entry = () => {
-  const [burgerClicked, setBurgerClicked] = useState(false);
+  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext);
   const [introPlayed, setIntroPlayed] = useState(false);
+
+  useEffect(() => {
+    setBurgerMenu(false);
+  }, []);
 
   useEffect(() => {
     if (localStorage.getItem("introPlayed") || introPlayed) {
@@ -61,12 +66,9 @@ const Entry = () => {
   return (
     <>
       <Page>
-        <Nav
-          burgerClicked={burgerClicked}
-          setBurgerClicked={setBurgerClicked}
-        />
+        <Nav />
         <TitleContainer className="Title-Container" />
-        {burgerClicked && <BurgerMenu />}
+        {burgerMenu && <BurgerMenu />}
       </Page>
     </>
   );

@@ -1,11 +1,14 @@
 import "../styles/globals.css";
 import Meta from "../components/utility/Meta";
+import BurgerMenuContextProvider from "../context/BurgerMenuContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Meta />
-      <Component {...pageProps} />
+      <BurgerMenuContextProvider>
+        <Component {...pageProps} />
+      </BurgerMenuContextProvider>
     </>
   );
 }

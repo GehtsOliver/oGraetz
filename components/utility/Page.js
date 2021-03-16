@@ -1,15 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const Page = ({ children, className, id = "" }) => {
-  return (
-    <section id={id} className={className}>
-      {children}
-    </section>
-  );
-};
-
-const PageContainer = styled(Page)`
+const StyledPage = styled("section")`
   width: 100vw;
   min-height: 99vh;
   display: flex;
@@ -20,4 +12,12 @@ const PageContainer = styled(Page)`
   overflow-y: ${(props) => (props.hidden ? "hidden" : "")};
 `;
 
-export default PageContainer;
+const Page = ({ children, className, id = "" }) => {
+  return (
+    <StyledPage id={id} className={className}>
+      {children}
+    </StyledPage>
+  );
+};
+
+export default Page;

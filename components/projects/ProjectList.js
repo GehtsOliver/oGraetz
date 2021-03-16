@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+import Loader from "react-loader-spinner";
 import ProjectItem from "./ProjectItem";
 
 const ControlButton = styled.button`
@@ -43,14 +44,18 @@ const ProjectList = ({ className }) => {
       {/* <ControlButton onClick={() => setIndex((index) => index - 1)}>
         -
       </ControlButton> */}
-      {fetchedProjects ? (
+      { fetchedProjects ? (
         fetchedProjects.map((project, keyIndex) => (
           <ProjectItem key={keyIndex} project={project} />
         ))
-      ) : loading ? (
-        <h1>Loading...</h1>
       ) : (
-        ""
+        <Loader
+          type="Puff"
+          color="#000"
+          height={200}
+          width={200}
+          timeout={10000}
+        />
       )}
       {/* <ControlButton onClick={() => setIndex((index) => index + 1)}>
         +
@@ -63,7 +68,6 @@ const StyledProjectList = styled(ProjectList)`
   width: 101vw;
 
   border-radius: 1rem;
-  background: #fff;
   padding: 2rem;
   display: flex;
   column-gap: 5rem;

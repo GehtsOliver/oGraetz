@@ -1,6 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import styled from "styled-components";
+
+import Image from "next/image";
+import Link from "next/link";
 import Heading from "../../utility/Heading";
 import Page from "../../utility/Page";
 
@@ -8,13 +10,24 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 2rem;
+  row-gap: 6rem;
 
   > article {
     display: flex;
-    width: 40%;
-    column-gap: 5rem;
+    width: 70%;
+    column-gap: 10rem;
     line-height: 1.5;
+  }
+
+  > article > p {
+    text-align: justify;
+    letter-spacing: -1px;
+  }
+
+  > article > p > a {
+    color: #2e0347;
+    font-weight: 600;
+    text-transform: capitalize;
   }
 
   @media (max-width: 1000px) {
@@ -22,7 +35,6 @@ const Container = styled.div`
     row-gap: 4rem;
 
     > article {
-      width: 75%;
       margin: 0 auto;
       flex-direction: column;
       justify-content: center;
@@ -39,15 +51,20 @@ const About = () => {
         <Image width={250} height={250} src="/avatar.svg"></Image>
         <article>
           <p>
-            Hey! <br />
-            As you might have guessed, my name is Oliver and I am a Web
-            Developer based in Vienna, Austria. Coding websites and applications
-            of any kind is my passion. I am 100% self-taught which resembles
-            fairly well how hooked I am to web development.
+            Hey! <br></br>
+            Welcome to my personal website. I am Oliver and I am a Web
+            developer. Vienna, the capital of Austria, is my base.
           </p>
           <p>
-            I put in hundreds and hundreds of hours to reach the level I am
-            currently at. There is barely a challenge I am unable to surmount.
+            Web development is my passion, which is why I setup this website to
+            showcase my <Link href="/projects">projects</Link>. While I am a
+            business informatics student, I taught myself Web development
+            entirely autodidacticly.
+          </p>
+          <p>
+            I am always curious about new project ideas. If you have a project
+            upcoming and would like to collaborate with me, feel free to{" "}
+            <Link href="/contact">Get in touch</Link>.
           </p>
         </article>
       </Container>

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { BurgerMenuContext } from "../../context/BurgerMenuContext"
 
 const Burger = styled("div")`
   display: none;
   left: 0px;
-
+  top: 3px;
   z-index: 1;
 
   -webkit-user-select: none;
@@ -20,7 +21,7 @@ const Burger = styled("div")`
     width: 40px;
     height: 32px;
     position: absolute;
-    top: -7px;
+    top: -1px;
     left: -5px;
 
     cursor: pointer;
@@ -59,8 +60,8 @@ const Burger = styled("div")`
 
   > input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(-10px, -20px);
-    background: #232323;
+    transform: rotate(45deg) translate(-6px, -19px);
+    background: #cdcdcd;
   }
 
   > input:checked ~ span:nth-last-child(3) {
@@ -69,17 +70,18 @@ const Burger = styled("div")`
   }
 
   > input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, 11px);
+    transform: rotate(-45deg) translate(0, 15px);
   }
 `;
 
-const BurgerIcon = ({ setBurgerClicked, burgerClicked }) => {
+const BurgerIcon = () => {
+  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext)
 
   return (
     <Burger id="menuToggle">
       <input
         onClick={() => {
-            setBurgerClicked(!burgerClicked);
+            setBurgerMenu(!burgerMenu);
         }}
         type="checkbox"
       />

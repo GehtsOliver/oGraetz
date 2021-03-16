@@ -15,7 +15,7 @@ const MenuNode = ({ className }) => {
       </div>
       <div>
         <i className="fas fa-rss fa-2x"></i>
-        <Link href="/articles">Articles</Link>
+        <Link href="/blog">Blog</Link>
       </div>
       <div>
         <i className="fas fa-envelope fa-2x"></i>

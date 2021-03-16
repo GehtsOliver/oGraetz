@@ -22,8 +22,8 @@ const Darklayer = styled.div`
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  background-color: black;
-  opacity: 0.6;
+  background-color: #2e0347;
+  opacity: 0.4;
   z-index: -100;
 `;
 
