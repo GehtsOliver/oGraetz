@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StyledPage = styled("section")`
@@ -6,8 +6,8 @@ const StyledPage = styled("section")`
   min-height: 99vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: ${(props) => (props.justify ? "center" : "normal")};
+  justify-content: ${(props) => (props.nojustify ? "normal" : "center")};
+  align-items: ${(props) => (props.noalign ? "normal" : "center")};
   padding: 0;
   overflow-y: ${(props) => (props.hidden ? "hidden" : "")};
 `;

@@ -10,7 +10,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   row-gap: 6rem;
+  height: 100vh;
 
   > article {
     display: flex;
@@ -22,6 +24,7 @@ const Container = styled.div`
   > article > p {
     text-align: justify;
     letter-spacing: -1px;
+    font-size: 1.25rem;
   }
 
   > article > p > a {
@@ -46,8 +49,8 @@ const Container = styled.div`
 const About = () => {
   return (
     <Page justify id="About">
-      <Heading>About Me</Heading>
       <Container>
+        <Heading>About Me</Heading>
         <Image width={250} height={250} src="/avatar.svg"></Image>
         <article>
           <p>

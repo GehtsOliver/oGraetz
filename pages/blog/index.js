@@ -1,13 +1,21 @@
 import React, { useEffect, useContext } from "react";
+import styled from "styled-components";
 
-import Video from "../../components/landing-page/Entry/Video";
+import Card from "../../components/blog/Card";
 import Page from "../../components/utility/Page";
 import Navbar from "../../components/utility/Navbar";
 import BurgerMenu from "../../components/utility/BurgerMenu";
 import Meta from "../../components/utility/Meta";
-import Container from "../../components/utility/Container";
 import { BurgerMenuContext } from "../../context/BurgerMenuContext";
+import Posts from "../../components/blog/Posts";
 
+const Container = styled("section")`
+  width: 100vw;
+  min-height: 95vh;
+  display: flex;
+  padding: 3rem;
+`;
+// Set burger menu off on pages load
 const index = () => {
   useEffect(() => {
     setBurgerMenu(false);
@@ -18,10 +26,18 @@ const index = () => {
   return (
     <React.Fragment>
       <Page>
-        <Meta title="Contact Me" />
-        <Video />
+        <Meta title="Blog" />
         <Navbar />
-        <Container>{!burgerMenu ? <h1>Hello</h1> : <BurgerMenu />}</Container>
+        <Container>
+          {!burgerMenu ? (
+            <React.Fragment>
+              <Card />
+              <Posts />
+            </React.Fragment>
+          ) : (
+            <BurgerMenu />
+          )}
+        </Container>
       </Page>
     </React.Fragment>
   );
