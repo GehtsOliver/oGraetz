@@ -5,6 +5,11 @@ import Page from "../../components/utility/Page";
 import Video from "../../components/landing-page/Entry/Video";
 import Navbar from "../../components/utility/Navbar";
 import SingleProject from "../../components/projects/SingleProject";
+import BackArrow from "../../components/utility/BackArrow";
+
+const StyledBackArrow = styled(BackArrow)`
+color: white;
+`
 
 const Container = styled.div`
   padding-top: 5rem;
@@ -18,8 +23,9 @@ const Project = ({ project }) => {
   return (
     <>
       <Video />
+      <StyledBackArrow />
+      <Navbar />
       <Page hidden>
-        <Navbar />
         <Container>
           <SingleProject project={project} />
         </Container>
