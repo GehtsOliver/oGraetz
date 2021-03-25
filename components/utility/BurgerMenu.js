@@ -33,14 +33,16 @@ const BurgerMenu = styled(MenuNode)`
   align-items: center;
   row-gap: 2rem;
   justify-content: center;
-
+  color: ${props => props.color};
+  
   > div {
     display: flex;
     align-items: center;
   }
   > div > a {
     margin-left: 0.5rem;
-    color: #fff;
+    color: ${props => props.color};
+   
     font-weight: 300;
     font-size: 30px;
     :hover {

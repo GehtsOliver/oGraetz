@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const StyledPost = styled("div")`
-  width: 50vw;
+  width: 80vw;
   display: flex;
   column-gap: 1rem;
   padding: 1rem;
@@ -29,7 +29,7 @@ const Post = ({ passPost }) => {
   return (
     <Link href={`/blog/${passPost.id}`}>
       <StyledPost>
-        <Image height={150} width={300} src={passPost.img[0].url} />
+        <Image height={100} width={200} src={passPost.img[0].url} />
         <div>
           <h1>{passPost.title}</h1>
           <p>{passPost.excerpt}</p>

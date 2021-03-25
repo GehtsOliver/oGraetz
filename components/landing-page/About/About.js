@@ -34,8 +34,9 @@ const Container = styled.div`
   }
 
   @media (max-width: 1000px) {
+    margin-top: 3rem;
     flex-direction: column;
-    row-gap: 4rem;
+    row-gap: 2rem;
 
     > article {
       margin: 0 auto;
@@ -48,7 +49,7 @@ const Container = styled.div`
 
 const About = () => {
   return (
-    <Page justify id="About">
+    <Page id="About">
       <Container>
         <Heading>About Me</Heading>
         <Image width={250} height={250} src="/avatar.svg"></Image>

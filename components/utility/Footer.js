@@ -8,7 +8,8 @@ const Page = styled.section`
   overflow: hidden;
 
   @media (max-width: 1000px) {
-    height: 50vh;
+    height: auto;
+    
   }
 `;
 
@@ -40,14 +41,6 @@ const FooterElement = styled.footer`
   row-gap: 1.5rem;
   text-transform: uppercase;
 
-  @media (max-width: 1000px) {
-    padding: 2rem 0 8rem 0;
-    width: 100%;
-    position: relative;
-    top: 0rem;
-    left: 0;
-  }
-
   > h3 {
     color: #fff;
     font-size: 1.3rem;
@@ -57,6 +50,19 @@ const FooterElement = styled.footer`
     display: flex;
     column-gap: 1.5rem;
   }
+
+  @media (max-width: 1000px) {
+    padding: 2rem 0 8rem 0;
+    width: 100%;
+    position: static;
+    top: 0rem;
+    left: 0;
+
+    h3{
+      font-size: 1rem;
+    }
+  }
+
 `;
 
 const Footer = () => {

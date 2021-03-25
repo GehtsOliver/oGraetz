@@ -16,6 +16,14 @@ const SingleProjectWrapper = styled.main`
   align-items: center;
   column-gap: 3rem;
 
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    row-gap: 2rem;
+    border-radius: 0;
+  }
+
   h1 {
     font-size: 1.5rem;
     color: #2e0347;

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Navbar from "../../components/utility/Navbar";
 import Page from "../../components/utility/Page";
-import BackArrow from "../../components/utility/BackArrow"
+import BackArrow from "../../components/utility/BackArrow";
 
 const StyledPage = styled(Page)`
   margin-top: 3rem;
@@ -40,7 +40,7 @@ const Post = ({ post }) => {
   return (
     <>
       <Navbar />
-      <BackArrow/>
+      <BackArrow color="black"/>
       <StyledPage>
         <h1>{post.title}</h1>
         <h3>

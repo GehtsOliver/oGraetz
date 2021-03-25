@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+
+import BurgerMenu from "../../components/utility/BurgerMenu";
+import { BurgerMenuContext } from "../../context/BurgerMenuContext";
 
 import Page from "../../components/utility/Page";
 import Video from "../../components/landing-page/Entry/Video";
@@ -7,27 +10,29 @@ import Navbar from "../../components/utility/Navbar";
 import SingleProject from "../../components/projects/SingleProject";
 import BackArrow from "../../components/utility/BackArrow";
 
-const StyledBackArrow = styled(BackArrow)`
-color: white;
-`
-
 const Container = styled.div`
-  padding-top: 5rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
+const StyledBackArrow = styled(BackArrow)`
+  display: absolute;
+  bottom: 1rem;
+`;
+
 const Project = ({ project }) => {
+  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext);
+
   return (
     <>
       <Video />
       <StyledBackArrow />
       <Navbar />
-      <Page hidden>
+      <Page>
         <Container>
-          <SingleProject project={project} />
+          {burgerMenu ? <BurgerMenu /> : <SingleProject project={project} />}
         </Container>
       </Page>
     </>

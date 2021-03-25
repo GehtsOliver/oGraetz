@@ -17,6 +17,7 @@ const StyledNav = styled.nav`
   padding: 0 3rem;
   z-index: 1000;
 
+
   a {
     padding-bottom: 0;
     margin-right: 5rem;

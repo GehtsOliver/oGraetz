@@ -12,6 +12,15 @@ import { BurgerMenuContext } from "../../context/BurgerMenuContext";
 const StyledPage = styled(Page)`
   background-color: transparent;
   justify-content: normal;
+  align-items: center;
+  height: 100vh;
+
+  @media (max-width: 1000px) {
+    section {
+      position: relative;
+      top: 10rem;
+    }
+  }
 `;
 
 const index = () => {

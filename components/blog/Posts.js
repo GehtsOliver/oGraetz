@@ -14,8 +14,9 @@ const StyledPosts = styled("div")`
   row-gap: 1rem;
 
   @media (max-width: 1000px) {
-    padding: 1rem;
+    padding: 0;
     align-items: center;
+    width: 100%;
   }
 `;
 
