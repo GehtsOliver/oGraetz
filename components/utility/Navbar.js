@@ -36,7 +36,7 @@ const Navbar = ({ className }) => {
 
   return (
     <StyledNav className={className}>
-      <Image src="/oGrætz_light.svg" width={75} height={38} />
+      <Image src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774310/Public/oGr%C3%A6tz_light_jeq4sk.svg" width={75} height={38} />
       <div role="navigation">
         <Link href="/">Home</Link>
         <Link href="/projects">Projects</Link>

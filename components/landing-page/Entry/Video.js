@@ -33,7 +33,7 @@ const Video = () => {
       <Darklayer />
       <VideoContainer>
         <Vid autoPlay muted loop>
-          <source src="/Entry-Bg-Video.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/djiqhmzqs/video/upload/v1616774943/Public/Landing_Page/Public_Landing_Page_Entry-Bg_d0ajug-q_40_cxfchy.mp4" type="video/mp4" />
         </Vid>
       </VideoContainer>
     </>

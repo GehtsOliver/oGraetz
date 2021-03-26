@@ -65,16 +65,16 @@ display: none;
 
 const Banner = ({ setSelectedElement }) => {
   const images = [
-    { name: "HTML", category: "Frontend" },
-    { name: "CSS", category: "Frontend" },
-    { name: "Javascript", category: "Frontend" },
-    { name: "React", category: "Frontend" },
-    { name: "Nextjs", category: "Frontend" },
-    { name: "Nodejs", category: "Backend" },
-    { name: "Firebase", category: "Database" },
-    { name: "Mongodb", category: "Database" },
-    { name: "Mysql", category: "Database" },
-    { name: "Figma", category: "Design" },
+    { name: "HTML", category: "Frontend", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774194/Public/Stack/HTML_gqml0l.svg" },
+    { name: "CSS", category: "Frontend", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774194/Public/Stack/CSS_d0peii.svg" },
+    { name: "Javascript", category: "Frontend", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774194/Public/Stack/Javascript_zmniqy.svg" },
+    { name: "React", category: "Frontend", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774197/Public/Stack/React_gqppbn.svg" },
+    { name: "Nextjs", category: "Frontend", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774197/Public/Stack/Nextjs_ivyuye.svg" },
+    { name: "Nodejs", category: "Backend", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774197/Public/Stack/Nodejs_pklusa.svg" },
+    { name: "Firebase", category: "Database", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774194/Public/Stack/Firebase_lcs0da.svg" },
+    { name: "Mongodb", category: "Database", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774196/Public/Stack/Mongodb_hx9qnm.svg" },
+    { name: "Mysql", category: "Database", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774197/Public/Stack/Mysql_k9qhuf.svg" },
+    { name: "Figma", category: "Design", url: "https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774194/Public/Stack/Figma_xzsaxj.svg" },
   ];
 
   const imageElements = images.map((image) => {
@@ -84,7 +84,7 @@ const Banner = ({ setSelectedElement }) => {
         onClick={() => setSelectedElement(image.category)}
         height={100}
         width={200}
-        src={`/Stack/${image.name}.svg`}
+        src={image.url}
       />
     );
   });

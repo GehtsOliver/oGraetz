@@ -52,7 +52,7 @@ const About = () => {
     <Page id="About">
       <Container>
         <Heading>About Me</Heading>
-        <Image width={250} height={250} src="/avatar.svg"></Image>
+        <Image width={250} height={250} src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774073/Public/Landing_Page/avatar_vglndg.svg"></Image>
         <article>
           <p>
             Hey! <br></br>
