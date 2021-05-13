@@ -1,20 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
+import Layout from "../../components/Layout";
 import Container from "../../components/utility/Container";
-import Video from "../../components/landing-page/Entry/Video";
-import Page from "../../components/utility/Page";
-import Navbar from "../../components/utility/Navbar";
-import BurgerMenu from "../../components/utility/BurgerMenu";
-import Message from "../../components/utility/Message";
-import Meta from "../../components/utility/Meta";
-import { BurgerMenuContext } from "../../context/BurgerMenuContext";
-
-const StyledPage = styled(Page)`
-  min-height: 100vh;
-  background: none;
-  justify-content: normal;
-`;
 
 const Form = styled("form")`
   display: flex;
@@ -82,18 +70,12 @@ const Form = styled("form")`
 `;
 
 const index = () => {
-  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext) 
-
   const [name, setName] = useState(""),
     [email, setEmail] = useState(""),
     [number, setNumber] = useState(""),
     [message, setMessage] = useState(""),
     [error, setError] = useState(""),
     [statusMessage, setStatusMessage] = useState("");
-
-    useEffect(() => {
-      setBurgerMenu(false);
-    }, []);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -118,76 +100,62 @@ const index = () => {
   };
 
   return (
-    <>
-      <Meta title="Contact Me" />
-      <Video />
-      <StyledPage>
-        <Navbar
-        />
-        <Container>
-          {error && <h1>{error}</h1>}
-          {statusMessage && !burgerMenu ? (
-            <Message statusMessage={statusMessage} />
-          ) : statusMessage && burgerMenu ? (
-            <BurgerMenu />
-          ) : !statusMessage && burgerMenu ? (
-            <BurgerMenu />
-          ) : (
-            <Form onSubmit={submitHandler}>
-              <div>
-                <label htmlFor="name">Name</label>
-                <input
-                  autoFocus
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="John Doe"
-                  value={name}
-                  onChange={(e) => {
-                    setName(e.target.value);
-                  }}
-                ></input>
-              </div>
-              <div>
-                <label htmlFor="email">E-Mail</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="John-doe@aol.com"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                ></input>
-              </div>
-              <div>
-                <label htmlFor="number">Phone Number</label>
-                <input
-                  type="tel"
-                  name="number"
-                  placeholder="+436708889701"
-                  value={number}
-                  onChange={(e) => setNumber(e.target.value)}
-                ></input>
-              </div>
-              <div>
-                <label htmlFor="message">Message</label>
-                <textarea
-                  name="message"
-                  required
-                  placeholder="Hi Oliver, I am interested in you and me working together. Please, contact me."
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                ></textarea>
-              </div>
-              <button type="submit">
-                Submit <i className="far fa-paper-plane"></i>
-              </button>
-            </Form>
-          )}
-        </Container>
-      </StyledPage>
-    </>
+    <Layout>
+      <Container>
+        {error && <h1>{error}</h1>}
+        <Form onSubmit={submitHandler}>
+          <div>
+            <label htmlFor="name">Name</label>
+            <input
+              autoFocus
+              type="text"
+              name="name"
+              required
+              placeholder="John Doe"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div>
+            <label htmlFor="email">E-Mail</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="John-doe@aol.com"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            ></input>
+          </div>
+          <div>
+            <label htmlFor="number">Phone Number</label>
+            <input
+              type="tel"
+              name="number"
+              placeholder="+436708889701"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
+            ></input>
+          </div>
+          <div>
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="message"
+              required
+              placeholder="Hi Oliver, I am interested in you and me working together. Please, contact me."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+          </div>
+          <button type="submit">
+            Submit <i className="far fa-paper-plane"></i>
+          </button>
+        </Form>
+      </Container>
+    </Layout>
   );
 };
 

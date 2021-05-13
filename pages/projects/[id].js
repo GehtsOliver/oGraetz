@@ -1,41 +1,26 @@
-import React, { useContext } from "react";
 import styled from "styled-components";
 
-import BurgerMenu from "../../components/utility/BurgerMenu";
-import { BurgerMenuContext } from "../../context/BurgerMenuContext";
-
-import Page from "../../components/utility/Page";
-import Video from "../../components/landing-page/Entry/Video";
-import Navbar from "../../components/utility/Navbar";
+import Layout from "../../components/Layout";
 import SingleProject from "../../components/projects/SingleProject";
-import BackArrow from "../../components/utility/BackArrow";
+import BackButton from "../../components/utility/BackButton";
 
 const Container = styled.div`
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const StyledBackArrow = styled(BackArrow)`
-  display: absolute;
-  bottom: 1rem;
+  overflow: hidden;
 `;
 
 const Project = ({ project }) => {
-  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext);
-
   return (
-    <>
-      <Video />
-      <StyledBackArrow />
-      <Navbar />
-      <Page>
-        <Container>
-          {burgerMenu ? <BurgerMenu /> : <SingleProject project={project} />}
-        </Container>
-      </Page>
-    </>
+    <Layout>
+      <BackButton />
+      <Container>
+        <SingleProject project={project} />
+      </Container>
+    </Layout>
   );
 };
 

@@ -1,21 +1,19 @@
-import Entry from "../components/landing-page/Entry/Entry";
-import About from "../components/landing-page/About/About";
-import Video from "../components/landing-page/Entry/Video";
-import Stack from "../components/landing-page/Stack/Stack";
-import Footer from "../components/utility/Footer";
+import styled from "styled-components";
 
-export default function Home() {
+import AboutPage from "../components/landing-page/About";
+import StackPage from "../components/landing-page/Stack/Stack";
+import Layout from "../components/Layout";
+
+const EntryComponent = styled.section`
+  height: 100vh;
+`;
+
+export default function HomePage() {
   return (
-    <>
-      <Video />
-
-      <Entry />
-
-      <About />
-
-      <Stack />
-
-      <Footer />
-    </>
+    <Layout>
+      <EntryComponent />
+      <AboutPage />
+      <StackPage />
+    </Layout>
   );
 }

@@ -1,10 +1,9 @@
-import React from "react";
 import styled from "styled-components";
 
 import Image from "next/image";
 import Link from "next/link";
-import Heading from "../../utility/Heading";
-import Page from "../../utility/Page";
+import Heading from "../utility/Heading";
+import Page from "../utility/Page";
 
 const Container = styled.div`
   display: flex;
@@ -52,7 +51,11 @@ const About = () => {
     <Page id="About">
       <Container>
         <Heading>About Me</Heading>
-        <Image width={250} height={250} src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774073/Public/Landing_Page/avatar_vglndg.svg"></Image>
+        <Image
+          width={250}
+          height={250}
+          src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774073/Public/Landing_Page/avatar_vglndg.svg"
+        ></Image>
         <article>
           <p>
             Hey! <br></br>

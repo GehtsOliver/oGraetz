@@ -1,10 +1,9 @@
-import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-import Navbar from "../../components/utility/Navbar";
+import Layout from "../../components/Layout";
 import Page from "../../components/utility/Page";
-import BackArrow from "../../components/utility/BackArrow";
+import BackButton from "../../components/utility/BackButton";
 
 const StyledPage = styled(Page)`
   margin-top: 3rem;
@@ -38,9 +37,8 @@ const StyledPage = styled(Page)`
 
 const Post = ({ post }) => {
   return (
-    <>
-      <Navbar />
-      <BackArrow color="black"/>
+    <Layout>
+      <BackButton color="black" />
       <StyledPage>
         <h1>{post.title}</h1>
         <h3>
@@ -49,7 +47,7 @@ const Post = ({ post }) => {
         <Image src={post.img[0].url} width={900} height={450} />
         <p>{post.content}</p>
       </StyledPage>
-    </>
+    </Layout>
   );
 };
 

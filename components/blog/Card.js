@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const StyledCard = styled("section")`
@@ -18,9 +17,7 @@ const StyledCard = styled("section")`
 const Card = () => {
   return (
     <StyledCard>
-      <h1>Glossary</h1>
-        <p>Welcome to my technical blog site.</p>
-        <p>You will find personally written blog posts on this page which are meant to inform the reader about technical terms and notions.</p>
+      <h1>Blog</h1>
     </StyledCard>
   );
 };

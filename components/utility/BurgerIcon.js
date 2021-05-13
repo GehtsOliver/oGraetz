@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
-import { BurgerMenuContext } from "../../context/BurgerMenuContext"
+import { BurgerMenuContext } from "../../context/BurgerMenuContext";
 
 const Burger = styled("div")`
   display: none;
@@ -75,13 +75,13 @@ const Burger = styled("div")`
 `;
 
 const BurgerIcon = () => {
-  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext)
+  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext);
 
   return (
     <Burger id="menuToggle">
       <input
         onClick={() => {
-            setBurgerMenu(!burgerMenu);
+          setBurgerMenu(!burgerMenu);
         }}
         type="checkbox"
       />

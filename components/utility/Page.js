@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const StyledPage = styled("section")`
@@ -10,6 +9,10 @@ const StyledPage = styled("section")`
   align-items: ${(props) => (props.noalign ? "normal" : "center")};
   padding: 0;
   overflow-y: ${(props) => (props.hidden ? "hidden" : "")};
+
+  @media (max-width: 500px) {
+    min-height: 130vh;
+  }
 `;
 
 const Page = ({ children, className, id = "" }) => {

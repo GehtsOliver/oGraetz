@@ -7,11 +7,13 @@ const StyledPosts = styled("div")`
   padding: 0 10rem;
   width: 100vw;
   font-size: 3rem;
-  color: #000;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   row-gap: 1rem;
+  overflow: hidden;
+  
 
   @media (max-width: 1000px) {
     padding: 0;

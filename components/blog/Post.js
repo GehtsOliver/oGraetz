@@ -1,15 +1,15 @@
-import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
 const StyledPost = styled("div")`
-  width: 80vw;
+  width: 60vw;
   display: flex;
   column-gap: 1rem;
   padding: 1rem;
   border-radius: 2rem;
   font-size: 1.2rem;
+  background: #fff;
 
   border: 1px solid gray;
 

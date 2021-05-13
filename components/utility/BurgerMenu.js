@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -19,30 +18,30 @@ const MenuNode = ({ className }) => {
       </div>
       <div>
         <i className="fas fa-envelope fa-2x"></i>
-        <Link href="/contact">Hire</Link>
+        <Link href="/contact">Contact</Link>
       </div>
     </nav>
   );
 };
 
 const BurgerMenu = styled(MenuNode)`
-  height: 80%;
-  width: 100%;
+  height: 80vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 2rem;
   justify-content: center;
-  color: ${props => props.color};
-  
+  color: ${(props) => props.color};
+
   > div {
     display: flex;
     align-items: center;
   }
   > div > a {
     margin-left: 0.5rem;
-    color: ${props => props.color};
-   
+    color: ${(props) => props.color};
+
     font-weight: 300;
     font-size: 30px;
     :hover {

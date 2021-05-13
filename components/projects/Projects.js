@@ -2,15 +2,9 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Loader from "react-loader-spinner";
-import ProjectItem from "./ProjectItem";
+import Project from "./Project";
 
-const ControlButton = styled.button`
-  padding: 2rem;
-  background: black;
-  color: white;
-`;
-
-const ProjectList = ({ className }) => {
+const Projects = ({ className }) => {
   const [fetchedProjects, setFetchedProjects] = useState([]),
     [loading, setLoading] = useState(false),
     [index, setIndex] = useState(0);
@@ -41,12 +35,9 @@ const ProjectList = ({ className }) => {
 
   return (
     <div className={className}>
-      {/* <ControlButton onClick={() => setIndex((index) => index - 1)}>
-        -
-      </ControlButton> */}
-      { fetchedProjects ? (
+      {fetchedProjects ? (
         fetchedProjects.map((project, keyIndex) => (
-          <ProjectItem key={keyIndex} project={project} />
+          <Project key={keyIndex} project={project} />
         ))
       ) : (
         <Loader
@@ -57,14 +48,11 @@ const ProjectList = ({ className }) => {
           timeout={10000}
         />
       )}
-      {/* <ControlButton onClick={() => setIndex((index) => index + 1)}>
-        +
-      </ControlButton> */}
     </div>
   );
 };
 
-const StyledProjectList = styled(ProjectList)`
+const StyledProjects = styled(Projects)`
   width: 101vw;
 
   border-radius: 1rem;
@@ -82,4 +70,4 @@ const StyledProjectList = styled(ProjectList)`
   }
 `;
 
-export default StyledProjectList;
+export default StyledProjects;

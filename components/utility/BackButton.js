@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const StyledArrow = styled("a")`
@@ -27,7 +26,7 @@ const StyledArrow = styled("a")`
   }
 `;
 
-const BackArrow = () => {
+const BackButton = () => {
   const clickHandler = () => {
     window.history.back();
   };
@@ -39,4 +38,4 @@ const BackArrow = () => {
   );
 };
 
-export default BackArrow;
+export default BackButton;

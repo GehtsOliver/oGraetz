@@ -1,10 +1,9 @@
-import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import BurgerIcon from "./HamburgerMenu";
+import BurgerIcon from "./BurgerIcon";
 import Image from "next/image";
 
-const StyledNav = styled.nav`
+const StyledHeader = styled.nav`
   position: relative;
   left: 0;
   width: 100vw;
@@ -32,11 +31,14 @@ const StyledNav = styled.nav`
   }
 `;
 
-const Navbar = ({ className }) => {
-
+const Header = ({ className }) => {
   return (
-    <StyledNav className={className}>
-      <Image src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774310/Public/oGr%C3%A6tz_light_jeq4sk.svg" width={75} height={38} />
+    <StyledHeader className={className}>
+      <Image
+        src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774310/Public/oGr%C3%A6tz_light_jeq4sk.svg"
+        width={75}
+        height={38}
+      />
       <div role="navigation">
         <Link href="/">Home</Link>
         <Link href="/projects">Projects</Link>
@@ -44,8 +46,8 @@ const Navbar = ({ className }) => {
         <Link href="/contact">Contact</Link>
         <BurgerIcon />
       </div>
-    </StyledNav>
+    </StyledHeader>
   );
 };
 
-export default Navbar;
+export default Header;
