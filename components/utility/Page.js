@@ -10,6 +10,10 @@ const StyledPage = styled("section")`
   padding: 0;
   overflow-y: ${(props) => (props.hidden ? "hidden" : "")};
 
+  @media (max-width: 900px){
+    min-height: 110vh;
+  }
+
   @media (max-width: 500px) {
     min-height: 130vh;
   }

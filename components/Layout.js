@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Header from "../components/utility/Header";
-import Footer from "../components/utility/Footer";
-import Video from "./landing-page/Video";
+import Header from "../components/partials/Header";
+import Footer from "../components/partials/Footer";
+import Video from "../components/partials/utils/Video";
 import { useRouter } from "next/router";
 import { BurgerMenuContext } from "../context/BurgerMenuContext";
 import { useContext, useEffect } from "react";
-import BurgerMenu from "./utility/BurgerMenu";
+import BurgerMenu from "./partials/utils/BurgerMenu";
 
 export default function Layout({
   title = "oGraetz - Web Developer",
@@ -49,7 +49,7 @@ export default function Layout({
 
       <Video />
 
-      {!burgerMenu ? <main>{children}</main> : <BurgerMenu />}
+      {!burgerMenu ? <main className="flex-column gap">{children}</main> : <BurgerMenu />}
       {!burgerMenu ? router.asPath === "/" ? <Footer /> : "" : ""}
     </>
   );

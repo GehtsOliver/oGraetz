@@ -57,9 +57,6 @@ const StackElementBody = styled(Body)`
   font-size: 1rem;
   padding: 1rem 4rem 4rem 4rem;
   line-height: 1.6;
-  > p {
-    color: white;
-  }
 
   > div {
     width: 60%;
@@ -68,7 +65,7 @@ const StackElementBody = styled(Body)`
     border-radius: 3rem;
     display: flex;
     justify-content: center;
-    background: #fff;
+    border: 1px solid #2e0347;
     @media (max-width: 1000px) {
       width: 100%;
     }

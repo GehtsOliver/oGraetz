@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import Banner from "./Banner";
-import StackElementHeader from "./StackElementHeader";
-import StackElementBody from "./StackElementBody.js";
-import Heading from "../../utility/Heading";
-import Page from "../../utility/Page";
+import Banner from "./utils/Banner";
+import StackElementHeader from "./utils/StackElementHeader";
+import StackElementBody from "./utils/StackElementBody.js";
+import Page from "../utility/Page";
 
 const Card = styled.div`
   width: 50%;
-  min-height: 60%;
+  min-height: 30rem;
   border-radius: 1rem;
-  background-color: #2e0347;
+  border: 3px solid #2e0347;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #2e0347 !important;
 
   @media (max-width: 1000px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 
@@ -46,12 +46,12 @@ const Stack = () => {
 
   return (
     <Page>
-      <Heading>What I use</Heading>
+      <h1>Technologies I use</h1>
       <Card>
         <HeaderDiv>{headerElements}</HeaderDiv>
         <StackElementBody selectedElement={selectedElement} />
       </Card>
-      <Banner setSelectedElement={setSelectedElement} />
+      <Banner />
     </Page>
   );
 };

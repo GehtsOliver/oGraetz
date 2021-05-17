@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StackElementHeader = styled.button`
-  color: #fff;
-  margin-top: 2rem;
+color: #2e0347;  
+margin-top: 2rem;
   font-size: 1.5rem;
   cursor: pointer;
   background: none;
@@ -12,10 +12,6 @@ const StackElementHeader = styled.button`
 
   @media (max-width: 1000px) {
     font-size: 1rem;
-  }
-
-  .Selected {
-    border-bottom: 3px solid #fff !important;
   }
 
   :hover {

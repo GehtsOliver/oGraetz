@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import BurgerIcon from "./BurgerIcon";
+import BurgerIcon from "./utils/BurgerIcon";
 import Image from "next/image";
 
 const StyledHeader = styled.nav`
@@ -18,9 +18,12 @@ const StyledHeader = styled.nav`
 
 
   a {
+    color: white !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    text-decoration: none;
     padding-bottom: 0;
     margin-right: 5rem;
-    font-weight: 400;
     font-size: 20px;
     :hover {
       border-bottom 1px solid #fff;
