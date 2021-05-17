@@ -1,9 +1,7 @@
-import React from "react";
-
 import styled from "styled-components";
 import Image from "next/image";
 
-const SingleProjectWrapper = styled.main`
+const ProjectPageWrapper = styled.main`
   margin-top: 1rem;
   background: #fff;
   width: 60%;
@@ -72,7 +70,7 @@ const SingleProjectWrapper = styled.main`
   }
 `;
 
-const SingleProject = ({ project }) => {
+const ProjectPage = ({ project }) => {
   const tagsArr = project.tags.split(",");
   const techArr = project.tech.split(",");
   const usedTech = techArr.map((tech) => (
@@ -85,7 +83,7 @@ const SingleProject = ({ project }) => {
   ));
 
   return (
-    <SingleProjectWrapper>
+    <ProjectPageWrapper>
       <article>
         <h1>{project.title}</h1>
         <div>
@@ -103,8 +101,8 @@ const SingleProject = ({ project }) => {
           <Image width={700} height={350} src={project.img.url} />
         </a>
       </section>
-    </SingleProjectWrapper>
+    </ProjectPageWrapper>
   );
 };
 
-export default SingleProject;
+export default ProjectPage;

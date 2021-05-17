@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import Layout from "../../components/Layout";
-import SingleProject from "../../components/projects/SingleProject";
+import ProjectPage from "../../components/projects/ProjectPage";
 import BackButton from "../../components/utility/BackButton";
 
 const Container = styled.div`
@@ -18,7 +18,7 @@ const Project = ({ project }) => {
     <Layout>
       <BackButton />
       <Container>
-        <SingleProject project={project} />
+        <ProjectPage project={project} />
       </Container>
     </Layout>
   );
