@@ -6,57 +6,62 @@ const Project = ({ project, className }) => {
   let tagsArr = null;
   project.tags ? (tagsArr = project.tags.split(",")) : "";
   return (
-    <Link href={`/projects/${project.id}`}>
-      <article className={className}>
-        <h1>{project.title}</h1>
-        <Image
-          alt={project.title}
-          width={400}
-          height={200}
-          src={project.img.url}
-        />
+    <article className={className}>
+      <Link href={`/projects/${project.id}`}>
+        <a>
+          <Image
+            alt={project.title}
+            width={400}
+            height={300}
+            src={project.img.url}
+          />
+        </a>
+      </Link>
+
+      <div className="flex-column justify-center">
+        <h2>{project.title}</h2>
         <p>{project.excerpt}</p>
-        <div>
-          {project.tags ? tagsArr.map((tag) => <div key={tag}>{tag}</div>) : ""}
+        <div className="flex-row gap">
+          {project.tags && tagsArr.map((tag) => <div key={tag}>{tag}</div>)}
         </div>
-      </article>
-    </Link>
+        <div className="flex-row gap">
+          <Link href={`/projects/${project.id}`}>
+            <a className="btn btn-primary">Show More</a>
+          </Link>
+          <Link href={`${project.url}`}>
+            <a className="btn btn-primary">Go To Project</a>
+          </Link>
+        </div>
+      </div>
+    </article>
   );
 };
 
-const ProjectItem = styled(Project)`
-  color: #000;
-  background: #fff;
-  width: 18rem;
-  border-radius: 2rem;
-  padding: 1rem;
-  cursor: pointer;
-  box-shadow: 0.3rem 0.5rem 10px 0px #2e0347;
+const StyledProject = styled(Project)`
+  width: 60rem;
 
-  :hover {
-    transform: scale3d(1.05, 1.05, 1.05);
-    transition: all 1s;
+  display: flex;
+  column-gap: 3rem;
+
+  h2 {
+    margin: 0 0;
   }
 
-  > div {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    column-gap: 0.5rem;
+  img {
+    border-radius: 0.5rem;
   }
 
-  > div > div {
-    display: flex;
-    white-space: nowrap;
-    justify-content: center;
+  @media (max-width: 1000px) {
+    flex-direction: column;
     align-items: center;
-    background: #2e0347;
-    color: #fff;
-    font-weight: bold;
-    border: 1px solid gray;
-    border-radius: 20px;
-    padding: 0.5rem;
+    row-gap: 1rem;
+    width: 80vw;
+    margin: 0 auto;
+
+    div{
+      align-items: center;
+    }
   }
 `;
 
-export default ProjectItem;
+export default StyledProject;

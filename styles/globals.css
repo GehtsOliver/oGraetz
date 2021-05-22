@@ -35,14 +35,14 @@ p {
 }
 
 a {
-  text-decoration: underline;
-  font-weight: 800;
-  color: var(--primary-purple);
-  text-transform: uppercase;
+  text-decoration: none;
+}
+
+span {
 }
 
 .Selected {
-  border-bottom: 3px solid #2e0347; 
+  border-bottom: 3px solid #2e0347;
 }
 
 button {
@@ -56,9 +56,22 @@ button {
   font-weight: bold;
 }
 
+.btn {
+  border-radius: 10px;
+  width: 8rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  color: var(--primary-white);
+  background-color: var(--primary-purple);
+}
+
 .gap {
-  column-gap: 5rem;
-  row-gap: 3rem;
+  gap: 3rem;
 }
 
 .bg-purple {

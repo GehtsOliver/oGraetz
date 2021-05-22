@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
-import { BurgerMenuContext } from "../../../context/BurgerMenuContext";
+import { Context } from "../../../context/Context";
 
 const Burger = styled("div")`
   display: none;
@@ -75,7 +75,7 @@ const Burger = styled("div")`
 `;
 
 const BurgerIcon = () => {
-  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext);
+  const { burgerMenu, setBurgerMenu } = useContext(Context);
 
   return (
     <Burger id="menuToggle">

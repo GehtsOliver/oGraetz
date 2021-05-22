@@ -3,9 +3,10 @@ import Header from "../components/partials/Header";
 import Footer from "../components/partials/Footer";
 import Video from "../components/partials/utils/Video";
 import { useRouter } from "next/router";
-import { BurgerMenuContext } from "../context/BurgerMenuContext";
+import { Context } from "../context/Context";
 import { useContext, useEffect } from "react";
 import BurgerMenu from "./partials/utils/BurgerMenu";
+import Loading from "./utility/Loading";
 
 export default function Layout({
   title = "oGraetz - Web Developer",
@@ -15,7 +16,7 @@ export default function Layout({
 }) {
   const router = useRouter();
 
-  const { burgerMenu, setBurgerMenu } = useContext(BurgerMenuContext);
+  const { burgerMenu, setBurgerMenu, loading } = useContext(Context);
 
   // Set burgerMenu false on pageload
   useEffect(() => {
@@ -47,9 +48,19 @@ export default function Layout({
 
       <Header />
 
-      <Video />
+      {router.asPath !== "/blog" && !router.asPath.includes("/projects") && (
+        <Video />
+      )}
 
-      {!burgerMenu ? <main className="flex-column gap">{children}</main> : <BurgerMenu />}
+      {!burgerMenu ? (
+        !loading ? (
+          <main className="flex-column gap">{children}</main>
+        ) : (
+          <Loading />
+        )
+      ) : (
+        <BurgerMenu />
+      )}
       {!burgerMenu ? router.asPath === "/" ? <Footer /> : "" : ""}
     </>
   );

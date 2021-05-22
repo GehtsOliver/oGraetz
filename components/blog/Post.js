@@ -25,14 +25,14 @@ const StyledPost = styled("div")`
   }
 `;
 
-const Post = ({ passPost }) => {
+const Post = ({ post }) => {
   return (
-    <Link href={`/blog/${passPost.id}`}>
+    <Link href={`/blog/${post.id}`}>
       <StyledPost>
-        <Image height={100} width={200} src={passPost.img[0].url} />
+        <Image height={100} width={200} src={post.img[0].url} />
         <div>
-          <h1>{passPost.title}</h1>
-          <p>{passPost.excerpt}</p>
+          <h1>{post.title}</h1>
+          <p>{post.excerpt}</p>
         </div>
       </StyledPost>
     </Link>
