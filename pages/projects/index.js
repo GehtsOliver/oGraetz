@@ -10,12 +10,12 @@ const Container = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  row-gap: 10rem;
+  row-gap: 11rem;
   align-items: center;
 
   @media (max-width: 1000px) {
     padding: 10rem 0;
-    row-gap: 15rem;
+    row-gap: 18rem;
   }
 `;
 
@@ -26,7 +26,7 @@ const index = () => {
   useEffect(async () => {
     setLoading(true);
     const response = await fetch(
-      "https://ograetz-strapi.herokuapp.com/projects"
+      "https://ograetz-strapi.herokuapp.com/projects?_sort=createdAt:DESC"
     );
     const data = await response.json();
     setProjects(data);
@@ -34,7 +34,7 @@ const index = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout title="oGraetz's Personal Projects">
       <Container>
         {projects.map((project, keyIndex) => (
           <Project key={keyIndex} project={project} />

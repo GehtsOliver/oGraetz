@@ -1,32 +1,38 @@
 import styled from "styled-components";
 import { Context } from "../../context/Context";
 import { useContext, useEffect, useState } from "react";
+import Image from "next/image";
 
 import Post from "../../components/blog/Post";
 import Layout from "../../components/Layout";
 
 const Container = styled("section")`
   width: 100vw;
-  min-height: 95vh;
   display: flex;
-  padding: 0 3rem;
+  padding: 5rem 0;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 3rem;
 
-  h1 {
-    color: #000;
-    font-size: 2rem;
+  div > div {
+    border-radius: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 3rem 2rem;
+    gap: 2rem;
   }
 `;
 
 const index = () => {
-  const { loading, setLoading } = useContext(Context);
+  const { setLoading } = useContext(Context);
 
   const [posts, setPosts] = useState([]);
 
   async function fetchPosts() {
     const response = await fetch(
-      "https://ograetz-strapi.herokuapp.com/articles"
+      "https://ograetz-strapi.herokuapp.com/articles?_sort=createdAt:DESC"
     );
     const data = await response.json();
     return data;
@@ -43,6 +49,18 @@ const index = () => {
   return (
     <Layout title="oGraetz's Web Dev Blog">
       <Container>
+        <h1 style={{ margin: 0 }}>oGraetz's Web Development Blog</h1>
+        <div className="flex-row gap align-center">
+          <Image
+            src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1621237357/64855110_xd5jyk.jpg"
+            width={100}
+            height={100}
+          />
+          <p>
+            The purpose of my blog is to simplify technical topics for you and
+            to share a little about myself.
+          </p>
+        </div>
         {posts.map((post) => (
           <Post key={post.title} post={post} />
         ))}

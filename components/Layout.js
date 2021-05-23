@@ -48,9 +48,8 @@ export default function Layout({
 
       <Header />
 
-      {router.asPath !== "/blog" && !router.asPath.includes("/projects") && (
-        <Video />
-      )}
+      {!router.asPath.includes("/blog") &&
+        !router.asPath.includes("/projects") && <Video />}
 
       {!burgerMenu ? (
         !loading ? (
@@ -59,7 +58,7 @@ export default function Layout({
           <Loading />
         )
       ) : (
-        <BurgerMenu />
+        <BurgerMenu color="#2e0347;" />
       )}
       {!burgerMenu ? router.asPath === "/" ? <Footer /> : "" : ""}
     </>

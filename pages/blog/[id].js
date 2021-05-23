@@ -1,53 +1,29 @@
 import styled from "styled-components";
-import Image from "next/image";
+import PostPage from "../../components/blog/PostPage";
 
 import Layout from "../../components/Layout";
-import Page from "../../components/utility/Page";
 import BackButton from "../../components/utility/BackButton";
 
-
-const StyledPage = styled(Page)`
-  margin-top: 3rem;
-  justify-content: normal;
-  color: black;
-  padding: 0 3rem;
-  row-gap: 2rem;
-
-  h1 {
-    font-size: 2rem;
-    margin: 0;
-  }
-
-  > div {
-    box-shadow: 0 0 20px 0px #2e0347;
-  }
-
-  p {
-    width: 900px;
-    font-size: 1.2rem;
-    text-align: justify;
-    line-height: 1.7rem;
-  }
+const Container = styled.div`
+  padding: 5rem 0;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 1000px) {
-    p {
-      width: 95%;
-    }
+    padding: 3rem 0;
   }
 `;
 
 const Post = ({ post }) => {
   return (
-    <Layout>
-      <BackButton color="black" />
-      <StyledPage>
-        <h1>{post.title}</h1>
-        <h3>
-          {post.date} BY {post.author.toUpperCase()}
-        </h3>
-        <Image src={post.img[0].url} width={900} height={450} />
-        <p>{post.content}</p>
-      </StyledPage>
+    <Layout title={`${post.title} | oGraetz's Blog`}>
+      <BackButton />
+      <Container>
+        <PostPage post={post} />
+      </Container>
     </Layout>
   );
 };

@@ -9,6 +9,11 @@ const LoadingComponent = styled.div`
   border-radius: 5rem;
   padding: 0 3rem;
   row-gap: 1rem;
+  text-align: center;
+
+  svg {
+    margin-left: 1.5rem;
+  }
 `;
 
 const Loading = () => {
@@ -20,11 +25,11 @@ const Loading = () => {
         color="#2E0347"
         height={150}
         width={150}
-        timeout={100000000}
+        timeout={100000}
       />
       <h3>
-        Sorry, for taking so long. I'm a poor student who can only afford a
-        free-tier on heroku which is why it is taking so long..
+        Sorry, I'm a poor student who cannot afford a faster hosting provider
+        which is why it is taking so long..
       </h3>
     </LoadingComponent>
   );

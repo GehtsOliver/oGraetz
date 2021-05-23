@@ -1,30 +1,25 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProjectPageWrapper = styled.main`
-  margin-top: 1rem;
-  background: #fff;
-  width: 60%;
-  height: 30rem;
   padding: 2rem;
   border-radius: 2rem;
-  color: #2e0347;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 3rem;
+  text-align: justify;
 
   @media (max-width: 1000px) {
     flex-direction: column;
     width: 100%;
-    height: auto;
     row-gap: 2rem;
     border-radius: 0;
   }
 
   h1 {
-    font-size: 1.5rem;
-    color: #2e0347;
+    font-size: 1.7rem;
   }
 
   div {
@@ -34,22 +29,20 @@ const ProjectPageWrapper = styled.main`
     column-gap: 0.5rem;
   }
 
-  section > a > div > img {
+  div > a > div > img {
     border-radius: 20px;
   }
 
   article {
-    height: 80%;
     width: 30rem;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     row-gap: 1.5rem;
-    color: #2e0347;
 
-    > div {
-      display: flex;
-      justify-content: flex-start;
+    @media (max-width: 1000px) {
+      width: 90%;
     }
   }
 
@@ -58,35 +51,22 @@ const ProjectPageWrapper = styled.main`
     align-items: center;
     justify-content: center;
     max-width: 8rem;
-    background: #2e0347;
-    color: #fff;
-    border-radius: 20px;
+    border: 1px solid #2e0347;
+    color: #2e0347;
+    border-radius: 5px;
     padding: 0.5rem;
     font-weight: bold;
-  }
-
-  p {
-    color: #2e347;
   }
 `;
 
 const ProjectPage = ({ project }) => {
   const tagsArr = project.tags.split(",");
-  const techArr = project.tech.split(",");
-  const usedTech = techArr.map((tech) => (
-    <Image
-      key={tech}
-      width={200}
-      height={100}
-      src={`/Stack/${tech.trim()}.svg`}
-    />
-  ));
 
   return (
     <ProjectPageWrapper>
       <article>
         <h1>{project.title}</h1>
-        <div>
+        <div className="flex-row justify-center">
           {tagsArr.map((tag) => (
             <div key={tag} className="tag">
               {tag}
@@ -94,13 +74,12 @@ const ProjectPage = ({ project }) => {
           ))}
         </div>
         <p>{project.description}</p>
-        <div>{usedTech}</div>
       </article>
-      <section>
-        <a href={project.url}>
+      <Link href={project.url}>
+        <a>
           <Image width={700} height={350} src={project.img.url} />
         </a>
-      </section>
+      </Link>
     </ProjectPageWrapper>
   );
 };

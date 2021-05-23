@@ -46,7 +46,7 @@ const Stack = () => {
 
   return (
     <Page>
-      <h1>Technologies I use</h1>
+      <h1>Technology I use</h1>
       <Card>
         <HeaderDiv>{headerElements}</HeaderDiv>
         <StackElementBody selectedElement={selectedElement} />

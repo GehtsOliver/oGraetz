@@ -5,17 +5,15 @@ import ProjectPage from "../../components/projects/ProjectPage";
 import BackButton from "../../components/utility/BackButton";
 
 const Container = styled.div`
-  width: 100%;
-  height: 100vh;
+  height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 `;
 
 const Project = ({ project }) => {
   return (
-    <Layout>
+    <Layout title={`${project.title} | oGraetz's Personal Projects`}>
       <BackButton />
       <Container>
         <ProjectPage project={project} />

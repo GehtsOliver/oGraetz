@@ -1,23 +1,20 @@
 import styled from "styled-components";
-import Image from "next/image";
 import Link from "next/link";
 
-const StyledPost = styled("div")`
-  width: 60vw;
+const StyledPost = styled.article`
+  width: 30vw;
   display: flex;
-  column-gap: 1rem;
-  padding: 1rem;
-  border-radius: 2rem;
-  font-size: 1.2rem;
-  background: #fff;
+  column-gap: 2rem;
+  font-size: 1.1rem;
 
-  border: 1px solid gray;
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
 
-  :hover {
-    box-shadow: 0.3rem 0.5rem 10px 0px #2e0347;
-    cursor: pointer;
-    transform: scale3d(1.05, 1.05, 1.05);
-    transition: all 1s;
+  p {
+    margin: 0.2rem;
+    line-height: 1.3;
   }
 
   @media (max-width: 1000px) {
@@ -27,15 +24,17 @@ const StyledPost = styled("div")`
 
 const Post = ({ post }) => {
   return (
-    <Link href={`/blog/${post.id}`}>
-      <StyledPost>
-        <Image height={100} width={200} src={post.img[0].url} />
-        <div>
-          <h1>{post.title}</h1>
-          <p>{post.excerpt}</p>
-        </div>
-      </StyledPost>
-    </Link>
+    <StyledPost>
+      <div className="flex-column">
+        <Link href={`/blog/${post.id}`}>
+          <a>
+            <h1>{post.title}</h1>
+          </a>
+        </Link>
+        <p>Posted on {new Date(post.date).toLocaleDateString()}</p>
+        <p>{post.excerpt}</p>
+      </div>
+    </StyledPost>
   );
 };
 
