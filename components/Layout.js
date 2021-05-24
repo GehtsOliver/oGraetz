@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from "../components/partials/Header";
 import Footer from "../components/partials/Footer";
-// import Video from "../components/partials/utils/Video";
+import Video from "../components/partials/utils/Video";
 import { useRouter } from "next/router";
 import { Context } from "../context/Context";
 import { useContext, useEffect } from "react";
@@ -48,8 +48,8 @@ export default function Layout({
 
       <Header />
 
-      {/* {!router.asPath.includes("/blog") &&
-        !router.asPath.includes("/projects") && <Video />} */}
+      {!router.asPath.includes("/blog") &&
+        !router.asPath.includes("/projects") && <Video />}
 
       {!burgerMenu ? (
         !loading ? (

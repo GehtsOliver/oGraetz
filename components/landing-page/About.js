@@ -36,11 +36,17 @@ const About = () => {
       <div className="flex-row gap align-center">
         <Slide left>
           <div className="flex-column gap">
-            <Image
-              width={250}
-              height={250}
-              src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774073/Public/Landing_Page/avatar_vglndg.svg"
-            ></Image>
+            <div
+              style={{
+                width: "250px",
+                height: "250px",
+                background:
+                  "url('https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774073/Public/Landing_Page/avatar_vglndg.svg')",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+            />
             <p>
               <span className="capital">H</span>ey.
               <br></br> <span className="capital">I</span> am Oliver and I am a

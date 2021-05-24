@@ -3,15 +3,13 @@ import styled from "styled-components";
 import Ticker from "react-ticker";
 
 const BannerContainer = styled("div")`
-  height: 3rem;
   width: 100vw;
   margin-top: 3rem;
 `;
 
 const ImageContainer = styled.div`
   display: flex;
-  column-gap: 5rem;
-  padding-left: 3rem;
+  justify-content: center;
 `;
 
 const images = [
@@ -75,7 +73,18 @@ const Banner = () => {
           <ImageContainer>
             {images.map((img) => {
               return (
-                <Image key={img.name} src={img.url} width={200} height={200} />
+                <div
+                  key={img.name}
+                  style={{
+                    width: "150px",
+                    height: "150px",
+                    background: `url(${img.url})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    marginRight: "3rem",
+                  }}
+                />
               );
             })}
           </ImageContainer>
