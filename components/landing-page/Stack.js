@@ -9,15 +9,14 @@ import Page from "../utility/Page";
 const Card = styled.div`
   width: 50%;
   min-height: 30rem;
-  border-radius: 1rem;
-  border: 3px solid #2e0347;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #2e0347 !important;
 
   @media (max-width: 1000px) {
-    width: 90%;
+    width: 100vw;
   }
 `;
 

@@ -25,16 +25,13 @@ const MenuNode = ({ className }) => {
 };
 
 const BurgerMenu = styled(MenuNode)`
-  position: absolute;
-  width: 50vw;
-  top: 35vh;
-  left: 25vw;
+  height: 100vh;
   border-radius: 5px;
   padding: 2rem 1rem;
   display: flex;
   background: white;
   flex-direction: column;
-  
+  align-items: center;
   justify-content: center;
   row-gap: 2rem;
   color: ${(props) => props.color};

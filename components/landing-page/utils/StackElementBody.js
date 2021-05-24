@@ -1,6 +1,6 @@
 import React from "react";
-import ImageComponent from "../../utility/ImageComponent";
 import styled from "styled-components";
+import StyledImageComponent from "../../utility/ImageComponent";
 import {
   frontendContent,
   backendContent,
@@ -35,11 +35,12 @@ const Body = ({ selectedElement, className }) => {
 
   let images = content.images.map((image) => {
     return (
-      <ImageComponent
+      <StyledImageComponent
         key={image.split(".")[0]}
         src={`/Stack/${image}`}
         height={50}
         width={100}
+        margin={"0 0.3rem"}
       />
     );
   });
@@ -54,20 +55,19 @@ const Body = ({ selectedElement, className }) => {
 };
 
 const StackElementBody = styled(Body)`
+  width: 100%;
   font-size: 1rem;
   padding: 1rem 4rem 4rem 4rem;
   line-height: 1.6;
 
   > div {
-    width: 60%;
     margin: 1rem auto 2rem auto;
     padding: 1rem;
     border-radius: 3rem;
     display: flex;
     justify-content: center;
-    border: 1px solid #2e0347;
+
     @media (max-width: 1000px) {
-      width: 100%;
     }
   }
 `;

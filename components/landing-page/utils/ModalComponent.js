@@ -6,12 +6,13 @@ import Slide from "react-reveal/Slide";
 import ImageComponent from "../../utility/ImageComponent";
 
 const Container = styled.div`
-  font-family: "helvetica";
+  font-family: "Helvetica";
   background: #fff;
   padding: 2rem;
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   top: 20%;
   left: 20%;
   width: 60vw;
@@ -111,7 +112,11 @@ const ModalComponent = ({ content, handleClose, open }) => {
           onClick={() => handleClose()}
           className="far fa-times-circle"
         />
-        <Slide top>{text[content]}</Slide>
+        <Slide top>
+          <div className="flex-column justify-center align-center">
+            {text[content]}
+          </div>
+        </Slide>
       </Container>
     </Modal>
   );

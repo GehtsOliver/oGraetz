@@ -5,18 +5,21 @@ import Slide from "react-reveal/Slide";
 
 import ModalComponent from "./utils/ModalComponent";
 import StyledImageComponent from "../utility/ImageComponent";
+import Typed from "react-typed";
 
 const Container = styled.div`
   height: 90vh;
   width: 100vw;
-  
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+
   @media (max-width:900px){
     height: 120vh;
     padding: 0 2rem;
    
     div{
       flex-direction: column;
-      
   }
 }
 
@@ -31,19 +34,23 @@ const About = () => {
   const handleOpen = () => setOpen(true);
 
   return (
-    <Container className="flex-column align-center justify-center gap">
+    <Container
+      id="about"
+      className="flex-column align-center justify-center gap"
+    >
       <h1>About Me</h1>
       <div className="flex-row gap align-center">
         <Slide left>
-          <div className="flex-column gap">
+          <div
+            style={{ width: "30rem" }}
+            className="flex-column gap align-center"
+          >
             <StyledImageComponent src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774073/Public/Landing_Page/avatar_vglndg.svg" />
-            <p>
-              <span className="capital">H</span>ey.
-              <br></br> <span className="capital">I</span> am Oliver and I am a
-              Web developer based in Vienna, the capital of Austria. <br></br>
-              <span className="capital">F</span>eel free to ask me some
-              questions!
-            </p>
+
+            <Typed
+              typeSpeed={80}
+              strings={["Feel free to ask some questions."]}
+            />
           </div>
         </Slide>
 
