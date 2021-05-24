@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ImageComponent from "../utility/ImageComponent";
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 
@@ -32,7 +32,7 @@ const PostPage = ({ post }) => {
           {new Date(post.date).toLocaleDateString()} By {post.author}
         </h3>
       </div>
-      <Image src={post.img[0].url} width={300} height={350} />
+      <ImageComponent src={post.img[0].url} width={300} height={350} />
       <article>
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </article>

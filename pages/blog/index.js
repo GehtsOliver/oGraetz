@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Context } from "../../context/Context";
 import { useContext, useEffect, useState } from "react";
-import Image from "next/image";
+import ImageComponent from "../../components/utility/ImageComponent";
 
 import Post from "../../components/blog/Post";
 import Layout from "../../components/Layout";
@@ -15,7 +15,7 @@ const Container = styled("section")`
   align-items: center;
   gap: 3rem;
 
-  div > div {
+  img {
     border-radius: 100%;
   }
 
@@ -51,7 +51,7 @@ const index = () => {
       <Container>
         <h1 style={{ margin: 0 }}>oGraetz's Web Development Blog</h1>
         <div className="flex-row gap align-center">
-          <Image
+          <ImageComponent
             src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1621237357/64855110_xd5jyk.jpg"
             width={100}
             height={100}

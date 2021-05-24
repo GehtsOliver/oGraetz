@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
-import Image from "next/image";
 import { useState } from "react";
 import Slide from "react-reveal/Slide";
 
 import ModalComponent from "./utils/ModalComponent";
+import StyledImageComponent from "../utility/ImageComponent";
 
 const Container = styled.div`
   height: 90vh;
@@ -36,17 +36,7 @@ const About = () => {
       <div className="flex-row gap align-center">
         <Slide left>
           <div className="flex-column gap">
-            <div
-              style={{
-                width: "250px",
-                height: "250px",
-                background:
-                  "url('https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774073/Public/Landing_Page/avatar_vglndg.svg')",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-              }}
-            />
+            <StyledImageComponent src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774073/Public/Landing_Page/avatar_vglndg.svg" />
             <p>
               <span className="capital">H</span>ey.
               <br></br> <span className="capital">I</span> am Oliver and I am a

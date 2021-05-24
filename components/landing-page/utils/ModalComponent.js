@@ -1,8 +1,9 @@
 import Modal from "@material-ui/core/Modal";
 import styled from "styled-components";
 import Link from "next/link";
-import Image from "next/image";
 import Slide from "react-reveal/Slide";
+
+import ImageComponent from "../../utility/ImageComponent";
 
 const Container = styled.div`
   font-family: "helvetica";
@@ -92,7 +93,7 @@ const text = {
         </span>
       </p>
       <div>
-        <Image
+        <ImageComponent
           src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1621087660/study_90d8751aec.svg?86456.71500000026"
           width={150}
           height={150}

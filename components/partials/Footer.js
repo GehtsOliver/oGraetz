@@ -1,17 +1,16 @@
 import styled from "styled-components";
-import Image from "next/image";
+import ImageComponent from "../utility/ImageComponent";
 
 import ContactBtn from "./utils/FooterBtn";
 import { Link } from "@material-ui/core";
 
 const ImageContainer = styled.div`
-  div {
+  img {
     border-radius: 100%;
   }
 `;
 
 const Footer = styled.footer`
-  // background: 
   width: 80vw;
   border-top: #2e0347 3px solid;
   margin: 0 auto;
@@ -62,7 +61,7 @@ const FooterComponent = () => {
         <Link href="https://github.com/GehtsOliver">
           <a>
             <ImageContainer>
-              <Image
+              <ImageComponent
                 src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1621237357/64855110_xd5jyk.jpg"
                 width={100}
                 height={100}

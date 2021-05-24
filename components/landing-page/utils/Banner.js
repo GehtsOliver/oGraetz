@@ -1,10 +1,10 @@
-import Image from "next/image";
 import styled from "styled-components";
 import Ticker from "react-ticker";
+import StyledImageComponent from "../../utility/ImageComponent";
 
 const BannerContainer = styled("div")`
   width: 100vw;
-  margin-top: 3rem;
+  margin-top: 5rem;
 `;
 
 const ImageContainer = styled.div`
@@ -69,21 +69,16 @@ const Banner = () => {
   return (
     <BannerContainer>
       <Ticker speed={12}>
-        {({ index }) => (
+        {() => (
           <ImageContainer>
             {images.map((img) => {
               return (
-                <div
+                <StyledImageComponent
                   key={img.name}
-                  style={{
-                    width: "150px",
-                    height: "150px",
-                    background: `url(${img.url})`,
-                    backgroundSize: "contain",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    marginRight: "3rem",
-                  }}
+                  width={120}
+                  height={120}
+                  src={`${img.url}`}
+                  margin="0 3rem"
                 />
               );
             })}

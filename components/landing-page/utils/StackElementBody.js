@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import ImageComponent from "../../utility/ImageComponent";
 import styled from "styled-components";
 import {
   frontendContent,
@@ -35,7 +35,7 @@ const Body = ({ selectedElement, className }) => {
 
   let images = content.images.map((image) => {
     return (
-      <Image
+      <ImageComponent
         key={image.split(".")[0]}
         src={`/Stack/${image}`}
         height={50}

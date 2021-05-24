@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 import BurgerIcon from "./utils/BurgerIcon";
-import Image from "next/image";
+import ImageComponent from "../utility/ImageComponent";
 
 const StyledHeader = styled.nav`
   position: relative;
@@ -37,7 +37,7 @@ const StyledHeader = styled.nav`
 const Header = ({ className }) => {
   return (
     <StyledHeader className={className}>
-      <Image
+      <ImageComponent
         src="https://res.cloudinary.com/djiqhmzqs/image/upload/v1616774310/Public/oGr%C3%A6tz_light_jeq4sk.svg"
         width={75}
         height={38}

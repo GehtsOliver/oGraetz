@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Image from "next/image";
+import ImageComponent from "../utility/ImageComponent";
 import Link from "next/link";
 
 const ProjectPageWrapper = styled.main`
@@ -77,7 +77,7 @@ const ProjectPage = ({ project }) => {
       </article>
       <Link href={project.url}>
         <a>
-          <Image width={700} height={350} src={project.img.url} />
+          <ImageComponent width={700} height={350} src={project.img.url} />
         </a>
       </Link>
     </ProjectPageWrapper>

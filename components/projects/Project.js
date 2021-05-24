@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ImageComponent from "../utility/ImageComponent";
 import styled from "styled-components";
 
 const Project = ({ project, className }) => {
@@ -9,7 +9,7 @@ const Project = ({ project, className }) => {
     <article className={className}>
       <Link href={`/projects/${project.id}`}>
         <a>
-          <Image
+          <ImageComponent
             alt={project.title}
             width={400}
             height={300}
@@ -58,7 +58,7 @@ const StyledProject = styled(Project)`
     width: 80vw;
     margin: 0 auto;
 
-    div{
+    div {
       align-items: center;
     }
   }
