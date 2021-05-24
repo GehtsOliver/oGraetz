@@ -10,20 +10,22 @@ const EntryComponent = styled.section`
   height: 100vh;
 `;
 
-export default function HomePage() {
+const index = () => {
   return (
     <Layout>
       <EntryComponent>
-        <TypedComponent
-          content={[
-            "Hallo ich bin der Birol",
-            "ich komme aus birolhuasen",
-            "Wer bist du aller",
-          ]}
-        />
+        {/* <TypedComponent
+        content={[
+          "Hallo ich bin der Birol",
+          "ich komme aus birolhuasen",
+          "Wer bist du aller",
+        ]}
+      /> */}
       </EntryComponent>
       <AboutPage />
       <StackPage />
     </Layout>
   );
-}
+};
+
+export default index;
