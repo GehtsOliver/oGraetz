@@ -14,8 +14,8 @@ const BackButton = ({ className }) => {
 
 const StyledBackButton = styled(BackButton)`
   position: absolute;
-  left: 10rem;
-  top: 10rem;
+  left: 10vw;
+  top: 10vh;
   width: 4rem;
   height: 4rem;
 

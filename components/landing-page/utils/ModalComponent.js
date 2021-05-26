@@ -8,28 +8,33 @@ import ImageComponent from "../../utility/ImageComponent";
 const Container = styled.div`
   font-family: "Helvetica";
   background: #fff;
-  padding: 2rem;
+  padding: 3rem;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 20%;
-  left: 20%;
-  width: 60vw;
-  height: 60vh;
+  top: 12.5vh;
+  left: 25vw;
+  width: 50vw;
+  height: 75vh;
   line-height: 1.4;
 
   h1 {
     margin-bottom: 0rem;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1300px) {
     top: 5%;
     left: 10%;
     width: 80vw;
-    height: 90vh;
-    padding: 1rem;
+    min-height: 60vh;
 
+    span {
+      display: none;
+    }
+  }
+
+  @media (max-height: 750px) {
     span {
       display: none;
     }
@@ -41,12 +46,12 @@ const CloseButton = styled.i`
   color: red !important;
   font-size: 1.6rem;
   position: fixed;
-  top: 18%;
-  left: 80.5%;
+  top: 10.5vh;
+  left: 75vw;
 
-  @media (max-width: 1000px) {
-    top: 2%;
-    left: 91%;
+  @media (max-width: 1300px) {
+    top: 2.5vh;
+    left: 89.5vw;
   }
 `;
 
@@ -113,9 +118,7 @@ const ModalComponent = ({ content, handleClose, open }) => {
           className="far fa-times-circle"
         />
         <Slide top>
-          <div className="flex-column justify-center align-center">
-            {text[content]}
-          </div>
+          <div className="flex-column align-center">{text[content]}</div>
         </Slide>
       </Container>
     </Modal>

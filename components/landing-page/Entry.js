@@ -4,15 +4,19 @@ import Typed from "react-typed";
 
 const EntryPage = styled.div`
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
 `;
 
 const TextContainer = styled.div`
-  position: absolute;
-  background: white;
-  width: 25vw;
-  color: black;
-  top: 70%;
-  left: 37.5vw;
+  // position: absolute;
+  // top: 70%;
+  // left: 37.5vw;
+  margin-bottom: 3rem;
+
+  color: white;
   font-weight: 800;
   font-size: 2rem;
   text-align: center;
@@ -35,7 +39,7 @@ const Entry = () => {
             "Hey.",
             "My name is Oliver.",
             "I am a Web developer.",
-            "Get to know me below.",
+            "Get to know me.",
           ]}
         />
       </TextContainer>

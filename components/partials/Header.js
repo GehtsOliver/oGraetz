@@ -7,7 +7,7 @@ const StyledHeader = styled.nav`
   position: relative;
   left: 0;
   width: 100vw;
-  height: 2.7rem;
+  height: 5vh;
   display: flex;
   background: #2e0347;
   border-bottom: 1px solid #000;
@@ -19,14 +19,14 @@ const StyledHeader = styled.nav`
 
   a {
     color: white !important;
-    font-weight: 400 !important;
+    font-weight: 600 !important;
     text-transform: none !important;
     text-decoration: none;
     padding-bottom: 0;
     margin-right: 5rem;
     font-size: 20px;
     :hover {
-      border-bottom 1px solid #fff;
+      border-bottom 2px solid #fff;
     }
     @media (max-width: 1000px) {
       display: none;

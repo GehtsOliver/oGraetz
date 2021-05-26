@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const Button = styled.a`
    {
-    position: absolute;
-    top: 87%;
-    left: 50%;
+    // position: absolute;
+    // top: 87%;
+    // left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
   }

@@ -25,7 +25,8 @@ const MenuNode = ({ className }) => {
 };
 
 const BurgerMenu = styled(MenuNode)`
-  height: 100vh;
+  height: 95vh;
+  overflow: hidden;
   border-radius: 5px;
   padding: 2rem 1rem;
   display: flex;

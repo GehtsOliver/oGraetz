@@ -54,6 +54,10 @@ a {
   text-decoration: none;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 span {
 }
 

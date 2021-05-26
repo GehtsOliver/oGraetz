@@ -13,17 +13,18 @@ const ProjectPageWrapper = styled.main`
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    width: 100%;
     row-gap: 2rem;
     border-radius: 0;
   }
 
   h1 {
     font-size: 1.7rem;
+    @media (max-width: 1000px){
+      font-size: 1.3rem;
+    }
   }
 
   div {
-    width: 100%;
     display: flex;
     justify-content: center;
     column-gap: 0.5rem;
@@ -31,6 +32,10 @@ const ProjectPageWrapper = styled.main`
 
   div > a > div > img {
     border-radius: 20px;
+
+    @media (max-width: 1000px) {
+      width: 80vw !important;
+    }
   }
 
   article {
@@ -42,7 +47,7 @@ const ProjectPageWrapper = styled.main`
     row-gap: 1.5rem;
 
     @media (max-width: 1000px) {
-      width: 90%;
+      width: 40%;
     }
   }
 
@@ -77,7 +82,12 @@ const ProjectPage = ({ project }) => {
       </article>
       <Link href={project.url}>
         <a>
-          <ImageComponent width={700} height={350} src={project.img.url} />
+          <ImageComponent
+            width={700}
+            height={350}
+            phoneWidth={"80vw"}
+            src={project.img.url}
+          />
         </a>
       </Link>
     </ProjectPageWrapper>
